@@ -792,13 +792,16 @@ export default function FolkClock() {
     refresh(null);
   }, []);
 
-  // Auto-refresh at top of each hour
+  // Auto-refresh every 15 minutes
   useEffect(() => {
     const next = new Date(now);
-    next.setHours(next.getHours() + 1, 0, 0, 0);
+    const mins = next.getMinutes();
+    const minsUntilNext = 15 - (mins % 15);
+    next.setMinutes(next.getMinutes() + minsUntilNext, 0, 0);
     const ms = next - now;
     const t = setTimeout(() => {
       setNow(new Date());
+      refresh(null);
     }, ms);
     return () => clearTimeout(t);
   }, [now]);
@@ -927,8 +930,10 @@ export default function FolkClock() {
       align-items: center;
       justify-content: center;
       width: 100%;
-      max-width: 560px;
+      max-width: 720px;
       margin: 0 auto;
+      overflow-y: auto;
+      padding: 0.5rem 0;
     }
 
     @keyframes fadeUp {
@@ -943,7 +948,7 @@ export default function FolkClock() {
     }
 
     blockquote {
-      font-size: clamp(1.125rem, 4vw, 2rem);
+      font-size: clamp(0.95rem, 3.5vw, 1.9rem);
       line-height: 2;
       font-style: normal;
       color: ${theme.ink};
@@ -1146,17 +1151,21 @@ export default function FolkClock() {
               <div className="info-title">About This Collection</div>
               <div className="info-body">
                 <p>
-                  These verses are drawn from the Child Ballads—305 traditional English
-                  and Scottish folk songs collected by Francis James Child between
-                  1882 and 1898. They are among the oldest surviving songs in the
-                  English language.
+                  These verses are drawn from the Child Ballads — 305 traditional English
+                  and Scottish folk songs, collected by Francis James Child between
+                  1882 and 1898. They were passed down orally for centuries before anyone
+                  wrote them down, reshaped by every singer who learned them.
                 </p>
                 <p>
                   Each verse is chosen to match the time of day and season where you are.
                   The words have been lightly modernised where needed.
                 </p>
                 <p>
-                  A new verse appears every hour, or tap ANOTHER whenever you like.
+                  The verses are beautiful enough on their own, but they are songs.
+                  Find recordings. Listen to them. Learn them. Sing them.
+                </p>
+                <p>
+                  A new verse appears every 15 minutes, or press ANOTHER whenever you like.
                 </p>
               </div>
               <button className="info-close" onClick={() => setShowInfo(false)}>

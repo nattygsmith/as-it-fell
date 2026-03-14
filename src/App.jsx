@@ -22,46 +22,39 @@ const DEV_MODE = false;
 const QUOTES = [
   // --- Riddles Wisely Expounded (Child 1) ---
   {
-    text: "He knocked at the lady's gate,
-One evening when it was late.",
+    text: "He knocked at the lady's gate,\nOne evening when it was late.",
     source: "Riddles Wisely Expounded (Child 1)",
     time: ["evening"],
     season: [],
   },
   {
-    text: "The youngest sister, fair and bright,
-She lay beside him all through the night.",
+    text: "The youngest sister, fair and bright,\nShe lay beside him all through the night.",
     source: "Riddles Wisely Expounded (Child 1)",
     time: ["night"],
     season: [],
   },
   {
-    text: "And in the morning, come the day,
-She said, 'Young man, will you marry me?'",
+    text: "And in the morning, come the day,\nShe said, 'Young man, will you marry me?'",
     source: "Riddles Wisely Expounded (Child 1)",
     time: ["morning"],
     season: [],
   },
   // --- Lady Isabel and the Elf-Knight (Child 4) ---
   {
-    text: "Fair lady Isabel sits in her bower sewing,
-There she heard an elf-knight blowing his horn,
-The first morning in May.",
+    text: "Fair lady Isabel sits in her bower sewing,\nThere she heard an elf-knight blowing his horn,\nThe first morning in May.",
     source: "Lady Isabel and the Elf-Knight (Child 4)",
     time: ["morning"],
     season: ["spring"],
   },
   {
-    text: "They rode till they came to the sweet water side,
-Three hours before it was day.",
+    text: "They rode till they came to the sweet water side,\nThree hours before it was day.",
     source: "Lady Isabel and the Elf-Knight (Child 4)",
     time: ["night"],
     season: [],
   },
   // --- The Fair Flower of Northumberland (Child 9) ---
   {
-    text: "Thus rode she all one winter's night,
-Till Edenborow they saw in sight.",
+    text: "Thus rode she all one winter's night,\nTill Edenborow they saw in sight.",
     source: "The Fair Flower of Northumberland (Child 9)",
     time: ["night"],
     season: ["winter"],
@@ -69,35 +62,27 @@ Till Edenborow they saw in sight.",
   },
   // --- The Three Ravens (Child 26) ---
   {
-    text: "The one of them said to his mate,
-'Where shall we our breakfast take?'",
+    text: "The one of them said to his mate,\n'Where shall we our breakfast take?'",
     source: "The Three Ravens (Child 26)",
     time: ["morning"],
     season: [],
   },
   {
-    text: "She buried him before the prime,
-She died herself ere evening time.",
+    text: "She buried him before the prime,\nShe died herself ere evening time.",
     source: "The Three Ravens (Child 26)",
     time: ["evening"],
     season: [],
   },
   // --- Allison Gross (Child 35) ---
   {
-    text: "But as it fell out on last Halloween,
-When the fairy court was riding by,
-The queen lighted down on a daisy bank,
-Not far from the tree where I used to lie.",
+    text: "But as it fell out on last Halloween,\nWhen the fairy court was riding by,\nThe queen lighted down on a daisy bank,\nNot far from the tree where I used to lie.",
     source: "Allison Gross (Child 35)",
     time: ["morning", "afternoon"],
     season: ["autumn"],
   },
   // --- Thomas Rymer (Child 37) ---
   {
-    text: "And see not ye that bonny road,
-Which winds about the fernie brae?
-That is the road to fair Elfland,
-Where you and I this night maun gae.",
+    text: "And see not ye that bonny road,\nWhich winds about the fernie brae?\nThat is the road to fair Elfland,\nWhere you and I this night maun gae.",
     source: "Thomas Rymer (Child 37)",
     time: ["night"],
     season: [],
@@ -105,61 +90,46 @@ Where you and I this night maun gae.",
   },
   // --- Tam Lin (Child 39) ---
   {
-    text: "Gloomy, gloomy was the night,
-And eerie was the way,
-As fair Jenny in her green mantle
-To Miles Cross she did go.",
+    text: "Gloomy, gloomy was the night,\nAnd eerie was the way,\nAs fair Jenny in her green mantle\nTo Miles Cross she did go.",
     source: "Tam Lin (Child 39)",
     time: ["night"],
     season: ["autumn"],
   },
   {
-    text: "Just at the mirk and midnight hour,
-The fairy folk will ride,
-And they that would their true-love win,
-At Miles Cross they must bide.",
+    text: "Just at the mirk and midnight hour,\nThe fairy folk will ride,\nAnd they that would their true-love win,\nAt Miles Cross they must bide.",
     source: "Tam Lin (Child 39)",
     time: ["night"],
     season: ["autumn"],
   },
   {
-    text: "Tomorrow is Halloween,
-The elfin court will ride,
-Through England, and through all Scotland,
-And through the world wide.",
+    text: "Tomorrow is Halloween,\nThe elfin court will ride,\nThrough England, and through all Scotland,\nAnd through the world wide.",
     source: "Tam Lin (Child 39)",
     time: ["morning", "afternoon"],
     season: ["autumn"],
   },
   {
-    text: "O they begin at sky-setting,
-Ride all the evening tide;
-And she that will her true-love borrow,
-At Miles Cross will him bide.",
+    text: "O they begin at sky-setting,\nRide all the evening tide;\nAnd she that will her true-love borrow,\nAt Miles Cross will him bide.",
     source: "Tam Lin (Child 39)",
     time: ["evening"],
     season: ["autumn"],
   },
   // --- Clerk Colvill (Child 42) ---
   {
-    text: "And he is on to Clyde's water,
-By the lee light of the moon.",
+    text: "And he is on to Clyde's water,\nBy the lee light of the moon.",
     source: "Clerk Colvill (Child 42)",
     time: ["night"],
     season: [],
-    // notes: "Version C stanza 5. 'An'→'And', 'licht'→'light', 'o'→'of'."
+    // notes: "Version C stanza 5. 'An'\u2192'And', 'licht'\u2192'light', 'o'\u2192'of'."
   },
   // --- The Broomfield Hill (Child 43) ---
   {
-    text: "The one rode early in the morning,
-The other in the afternoon.",
+    text: "The one rode early in the morning,\nThe other in the afternoon.",
     source: "The Broomfield Hill (Child 43)",
     time: ["afternoon"],
     season: [],
   },
   {
-    text: "She pulled the blossom of the broom,
-The blossom it smells sweet.",
+    text: "She pulled the blossom of the broom,\nThe blossom it smells sweet.",
     source: "The Broomfield Hill (Child 43)",
     time: ["morning", "afternoon"],
     season: ["spring"],
@@ -170,24 +140,18 @@ The blossom it smells sweet.",
     source: "Captain Wedderburn's Courtship (Child 46)",
     time: ["night"],
     season: [],
-    // notes: "Single-line quote — may wish to expand if a fuller stanza can be confirmed."
+    // notes: "Single-line quote \u2014 may wish to expand if a fuller stanza can be confirmed."
   },
   // --- Proud Lady Margaret (Child 47) ---
   {
-    text: "Twas on a night, an evening bright,
-When the dew began to fall,
-Lady Margaret was walking up and down,
-Looking o'er her castle wall.",
+    text: "Twas on a night, an evening bright,\nWhen the dew began to fall,\nLady Margaret was walking up and down,\nLooking o'er her castle wall.",
     source: "Proud Lady Margaret (Child 47)",
     time: ["evening"],
     season: [],
-    // notes: "Version A stanza 1. 'fa'→'fall'."
+    // notes: "Version A stanza 1. 'fa'\u2192'fall'."
   },
   {
-    text: "There was a knight, in a summer's night,
-Appeared in a lady's hall,
-As she was walking up and down,
-Looking o'er her castle wall.",
+    text: "There was a knight, in a summer's night,\nAppeared in a lady's hall,\nAs she was walking up and down,\nLooking o'er her castle wall.",
     source: "Proud Lady Margaret (Child 47)",
     time: ["night"],
     season: ["summer"],
@@ -195,59 +159,43 @@ Looking o'er her castle wall.",
   },
   // --- The Bonny Hind (Child 50) ---
   {
-    text: "It's May she comes and May she goes,
-Down by the garden green,
-It's there she spied a good young squire,
-As good as e'er she seen.",
+    text: "It's May she comes and May she goes,\nDown by the garden green,\nIt's there she spied a good young squire,\nAs good as e'er she seen.",
     source: "The Bonny Hind (Child 50)",
     time: ["morning", "afternoon"],
     season: ["spring"],
   },
   // --- Sir Patrick Spens (Child 58) ---
   {
-    text: "Late late last night I saw the new moon,
-With the old moon in her arm;
-And I fear, I fear, my dear master,
-That we will come to harm.",
+    text: "Late late last night I saw the new moon,\nWith the old moon in her arm;\nAnd I fear, I fear, my dear master,\nThat we will come to harm.",
     source: "Sir Patrick Spens (Child 58)",
     time: ["night"],
     season: ["winter"],
   },
   // --- Child Waters (Child 63) ---
   {
-    text: "Lord John's mother in her bower
-Was sitting all alone;
-When in the silence of the night
-She heard fair Ellen's moan.",
+    text: "Lord John's mother in her bower\nWas sitting all alone;\nWhen in the silence of the night\nShe heard fair Ellen's moan.",
     source: "Child Waters (Child 63)",
     time: ["night"],
     season: [],
   },
   // --- Clerk Saunders (Child 69) ---
   {
-    text: "They baith lay still, and slept sound,
-Until the sun began to sheen;
-She drew the curtains a wee bit,
-And dull and drowsy was his een.",
+    text: "They baith lay still, and slept sound,\nUntil the sun began to sheen;\nShe drew the curtains a wee bit,\nAnd dull and drowsy was his een.",
     source: "Clerk Saunders (Child 69)",
     time: ["morning"],
     season: [],
-    // notes: "een = Scots for 'eyes'. Light modernisation: sleeped→slept, Untill→Until, drowsie→drowsy."
+    // notes: "een = Scots for 'eyes'. Light modernisation: sleeped\u2192slept, Untill\u2192Until, drowsie\u2192drowsy."
   },
   // --- Willie and Lady Maisry (Child 70) ---
   {
-    text: "You must come into my bower
-When the evening bells do ring,
-And you must come into my bower
-When the evening mass doth sing.",
+    text: "You must come into my bower\nWhen the evening bells do ring,\nAnd you must come into my bower\nWhen the evening mass doth sing.",
     source: "Willie and Lady Maisry (Child 70)",
     time: ["evening"],
     season: [],
   },
   // --- The Clerk's Twa Sons o Owsenford (Child 72) ---
   {
-    text: "The bonny clerks they died that morn,
-Their loves died lang ere noon.",
+    text: "The bonny clerks they died that morn,\nTheir loves died lang ere noon.",
     source: "The Clerk's Twa Sons o Owsenford (Child 72)",
     time: ["morning"],
     season: [],
@@ -255,126 +203,89 @@ Their loves died lang ere noon.",
   },
   // --- Lord Thomas and Annet (Child 73) ---
   {
-    text: "Sweet Willie and Fair Annie,
-As they sat on yonder hill,
-If they had sat from morn 'til evening,
-They had not talked their fill.",
+    text: "Sweet Willie and Fair Annie,\nAs they sat on yonder hill,\nIf they had sat from morn 'til evening,\nThey had not talked their fill.",
     source: "Lord Thomas and Annet (Child 73)",
     time: ["evening"],
     season: [],
   },
   // --- Fair Margaret and Sweet William (Child 74) ---
   {
-    text: "As it fell out on a long summer's day,
-Two lovers they sat on a hill;
-They sat together that long summer's day,
-And could not talk their fill.",
+    text: "As it fell out on a long summer's day,\nTwo lovers they sat on a hill;\nThey sat together that long summer's day,\nAnd could not talk their fill.",
     source: "Fair Margaret and Sweet William (Child 74)",
     time: ["afternoon"],
     season: ["summer"],
   },
   // --- The Lass of Roch Royal (Child 76) ---
   {
-    text: "Fair Isabell of Rochroyall,
-She dreamed where she lay,
-She dreamed a dream of her love Gregory,
-A little before the day.",
+    text: "Fair Isabell of Rochroyall,\nShe dreamed where she lay,\nShe dreamed a dream of her love Gregory,\nA little before the day.",
     source: "The Lass of Roch Royal (Child 76)",
     time: ["night"],
     season: [],
   },
   {
-    text: "The night was dark, and the wind blew cold,
-And her love was fast asleep,
-And the bairn that was in her two arms
-Full sore began to weep.",
+    text: "The night was dark, and the wind blew cold,\nAnd her love was fast asleep,\nAnd the bairn that was in her two arms\nFull sore began to weep.",
     source: "The Lass of Roch Royal (Child 76)",
     time: ["night"],
     season: ["winter"],
   },
   {
-    text: "When the cock had crawn, and day did dawn,
-And the sun began to peep,
-Then it rose him Love Gregor,
-And sorely did he weep.",
+    text: "When the cock had crawn, and day did dawn,\nAnd the sun began to peep,\nThen it rose him Love Gregor,\nAnd sorely did he weep.",
     source: "The Lass of Roch Royal (Child 76)",
     time: ["morning"],
     season: [],
-    // notes: "Version F. 'raise'→'rose'; 'sair, sair'→'sorely'. New stanza — distinct from existing #18 and #19 from same ballad."
+    // notes: "Version F. 'raise'\u2192'rose'; 'sair, sair'\u2192'sorely'. New stanza \u2014 distinct from existing #18 and #19 from same ballad."
   },
   // --- Sweet William's Ghost (Child 77) ---
   {
-    text: "O cocks are crowing at merry midnight,
-And the wild fowls herald the day;
-Give me my faith and troth again,
-And let me fare me on my way.",
+    text: "O cocks are crowing at merry midnight,\nAnd the wild fowls herald the day;\nGive me my faith and troth again,\nAnd let me fare me on my way.",
     source: "Sweet William's Ghost (Child 77)",
     time: ["night"],
     season: [],
-    // notes: "Modernised: 'a merry midnight'→'at merry midnight'; 'are boding day'→'herald the day'."
+    // notes: "Modernised: 'a merry midnight'\u2192'at merry midnight'; 'are boding day'\u2192'herald the day'."
   },
   // --- The Unquiet Grave (Child 78) ---
   {
-    text: "The wind does blow today, my love,
-And a few small drops of rain;
-I never had but one true-love,
-In a cold grave she was lain.",
+    text: "The wind does blow today, my love,\nAnd a few small drops of rain;\nI never had but one true-love,\nIn a cold grave she was lain.",
     source: "The Unquiet Grave (Child 78)",
     time: ["morning", "afternoon"],
     season: ["autumn", "winter"],
   },
   {
-    text: "'Tis down in yonder garden green,
-Love, where we used to walk,
-The finest flower that e'er was seen
-Is withered to a stalk.",
+    text: "'Tis down in yonder garden green,\nLove, where we used to walk,\nThe finest flower that e'er was seen\nIs withered to a stalk.",
     source: "The Unquiet Grave (Child 78)",
     time: ["morning", "afternoon"],
     season: ["autumn"],
   },
   // --- The Wife of Usher's Well (Child 79) ---
   {
-    text: "The hallow day of Yule are come,
-The nights are long and dark.",
+    text: "The hallow day of Yule are come,\nThe nights are long and dark.",
     source: "The Wife of Usher's Well (Child 79)",
     time: ["night"],
     season: ["winter"],
   },
   {
-    text: "The young cock crew in the merry morning,
-And the wild fowl chirped for day;
-The elder to the younger did say,
-Dear brother, we must away.",
+    text: "The young cock crew in the merry morning,\nAnd the wild fowl chirped for day;\nThe elder to the younger did say,\nDear brother, we must away.",
     source: "The Wife of Usher's Well (Child 79)",
     time: ["morning"],
     season: [],
   },
   {
-    text: "Up then crew the red, red cock,
-And up and crew the gray;
-The eldest to the youngest said,
-'Tis time we were away.",
+    text: "Up then crew the red, red cock,\nAnd up and crew the gray;\nThe eldest to the youngest said,\n'Tis time we were away.",
     source: "The Wife of Usher's Well (Child 79)",
     time: ["morning"],
     season: [],
-    // notes: "Kept alongside #24 — different stanza, different texture. #24 is warm and narrative; this is abrupt and elegiac."
+    // notes: "Kept alongside #24 \u2014 different stanza, different texture. #24 is warm and narrative; this is abrupt and elegiac."
   },
   {
-    text: "It fell about the Martinmas,
-When nights are lang and mirk,
-The carlin wife's three sons came home,
-And their hats were of the birch.",
+    text: "It fell about the Martinmas,\nWhen nights are lang and mirk,\nThe carlin wife's three sons came home,\nAnd their hats were of the birch.",
     source: "The Wife of Usher's Well (Child 79)",
     time: ["night"],
     season: ["winter"],
-    // notes: "Replaces retired #22 (two-line fragment). hame→home; o the birk→of the birch. 'carlin'=old woman; 'mirk'=dark. Hats of birch signal the sons have come from Paradise."
+    // notes: "Replaces retired #22 (two-line fragment). hame\u2192home; o the birk\u2192of the birch. 'carlin'=old woman; 'mirk'=dark. Hats of birch signal the sons have come from Paradise."
   },
   // --- Old Robin of Portingale (Child 80) ---
   {
-    text: "And about the middle time of the night
-Came twenty-four good knights in;
-Sir Gyles he was the foremost man,
-So well he knew that gin.",
+    text: "And about the middle time of the night\nCame twenty-four good knights in;\nSir Gyles he was the foremost man,\nSo well he knew that gin.",
     source: "Old Robin of Portingale (Child 80)",
     time: ["night"],
     season: [],
@@ -382,86 +293,63 @@ So well he knew that gin.",
   },
   // --- Little Musgrave and Lady Barnard (Child 81) ---
   {
-    text: "When supper was over, and mass was sung,
-And every man bound for bed,
-Little Musgrave and that lady
-In one chamber were laid.",
+    text: "When supper was over, and mass was sung,\nAnd every man bound for bed,\nLittle Musgrave and that lady\nIn one chamber were laid.",
     source: "Little Musgrave and Lady Barnard (Child 81)",
     time: ["evening"],
     season: [],
   },
   {
-    text: "Methinks I hear the thresel-cock,
-Methinks I hear the jay;
-Methinks I hear my lord Barnard,
-And I would I were away.",
+    text: "Methinks I hear the thresel-cock,\nMethinks I hear the jay;\nMethinks I hear my lord Barnard,\nAnd I would I were away.",
     source: "Little Musgrave and Lady Barnard (Child 81)",
     time: ["morning"],
     season: [],
-    // notes: "thresel=throstle (song thrush). jaye→jay. Kept 'thresel' for atmosphere."
+    // notes: "thresel=throstle (song thrush). jaye\u2192jay. Kept 'thresel' for atmosphere."
   },
   // --- The Bonny Birdy (Child 82) ---
   {
-    text: "There was a knight, in a summer's night,
-Was riding o'er the lee,
-And there he saw a bonny birdy,
-Was singing upon a tree.",
+    text: "There was a knight, in a summer's night,\nWas riding o'er the lee,\nAnd there he saw a bonny birdy,\nWas singing upon a tree.",
     source: "The Bonny Birdy (Child 82)",
     time: ["night"],
     season: ["summer"],
-    // notes: "Version A stanza 1. 'oer'→'o'er'. Opening line shared with Child 47 Version B (#45) — different ballads, accepted."
+    // notes: "Version A stanza 1. 'oer'\u2192'o'er'. Opening line shared with Child 47 Version B (#45) \u2014 different ballads, accepted."
   },
   // --- Child Maurice (Child 83) ---
   {
-    text: "The one was killed in the morning air,
-His mother died at eve,
-And ere the morning bells were rung,
-The threesome were all gone.",
+    text: "The one was killed in the morning air,\nHis mother died at eve,\nAnd ere the morning bells were rung,\nThe threesome were all gone.",
     source: "Child Maurice (Child 83)",
     time: ["morning", "evening"],
     season: [],
-    // notes: "Version D stanza 30. 'mornin'→'morning' (twice); 'een'→'eve'; 'or'→'ere'; 'was rung'→'were rung'; 'a gane'→'all gone'."
+    // notes: "Version D stanza 30. 'mornin'\u2192'morning' (twice); 'een'\u2192'eve'; 'or'\u2192'ere'; 'was rung'\u2192'were rung'; 'a gane'\u2192'all gone'."
   },
   // --- Bonny Barbara Allan (Child 84) ---
   {
-    text: "It was in and about the Martinmas time,
-When the green leaves were a-falling.",
+    text: "It was in and about the Martinmas time,\nWhen the green leaves were a-falling.",
     source: "Bonny Barbara Allan (Child 84)",
     time: ["morning", "afternoon"],
     season: ["autumn"],
   },
   {
-    text: "All in the merry month of May,
-When green leaves they were springing,
-This young man on his death-bed lay,
-For the love of Barbara Allen.",
+    text: "All in the merry month of May,\nWhen green leaves they were springing,\nThis young man on his death-bed lay,\nFor the love of Barbara Allen.",
     source: "Bonny Barbara Allan (Child 84)",
     time: ["morning", "afternoon"],
     season: ["spring"],
   },
   {
-    text: "It fell about the Lammas time,
-When the woods grow green and yellow.",
+    text: "It fell about the Lammas time,\nWhen the woods grow green and yellow.",
     source: "Bonny Barbara Allan (Child 84)",
     time: ["morning", "afternoon"],
     season: ["autumn"],
   },
   // --- Lady Alice (Child 85) ---
   {
-    text: "Lady Alice was sitting in her bower-window,
-Mending her midnight coif,
-And there she saw as fine a corpse
-As ever she saw in her life.",
+    text: "Lady Alice was sitting in her bower-window,\nMending her midnight coif,\nAnd there she saw as fine a corpse\nAs ever she saw in her life.",
     source: "Lady Alice (Child 85)",
     time: ["night"],
     season: [],
-    // notes: "Version A stanza 1. 'quoif'→'coif'."
+    // notes: "Version A stanza 1. 'quoif'\u2192'coif'."
   },
   {
-    text: "O lay him down gently, ye six men tall,
-All on the grass so green,
-And tomorrow, when the sun goes down,
-Lady Alice a corpse shall be seen.",
+    text: "O lay him down gently, ye six men tall,\nAll on the grass so green,\nAnd tomorrow, when the sun goes down,\nLady Alice a corpse shall be seen.",
     source: "Lady Alice (Child 85)",
     time: ["evening"],
     season: [],
@@ -469,43 +357,31 @@ Lady Alice a corpse shall be seen.",
   },
   // --- Young Benjie (Child 86) ---
   {
-    text: "And he was stout, and proud-hearted,
-And thought it bitterly,
-And he's gone by the wan moonlight
-To meet his Marjorie.",
+    text: "And he was stout, and proud-hearted,\nAnd thought it bitterly,\nAnd he's gone by the wan moonlight\nTo meet his Marjorie.",
     source: "Young Benjie (Child 86)",
     time: ["night"],
     season: [],
-    // notes: "Version A stanza 4. 'ot'→'it'; 'hes gaen'→'he's gone'."
+    // notes: "Version A stanza 4. 'ot'\u2192'it'; 'hes gaen'\u2192'he's gone'."
   },
   // --- Jellon Grame (Child 90) ---
   {
-    text: "Win up, my bonny boy, he says,
-As quick as ever you may;
-For ye maun gang for Lillie Flower,
-Before the break of day.",
+    text: "Win up, my bonny boy, he says,\nAs quick as ever you may;\nFor ye maun gang for Lillie Flower,\nBefore the break of day.",
     source: "Jellon Grame (Child 90)",
     time: ["night"],
     season: [],
-    // notes: "Stanza 2. 'eer'→'ever'."
+    // notes: "Stanza 2. 'eer'\u2192'ever'."
   },
   // --- The Gay Goshawk (Child 96) ---
   {
-    text: "And well he knew that lady fair
-Among her maidens free,
-For the flower that springs in May morning
-Was not so sweet as she.",
+    text: "And well he knew that lady fair\nAmong her maidens free,\nFor the flower that springs in May morning\nWas not so sweet as she.",
     source: "The Gay Goshawk (Child 96)",
     time: ["morning"],
     season: ["spring"],
-    // notes: "Version E stanza 12. 'kent'→'knew'; 'ladye feir'→'lady fair'."
+    // notes: "Version E stanza 12. 'kent'\u2192'knew'; 'ladye feir'\u2192'lady fair'."
   },
   // --- Brown Adam (Child 98) ---
   {
-    text: "It was late, late in the evening,
-Late, late in the afternoon,
-There came a knight to Brown Adam's house,
-And he was clad all in brown.",
+    text: "It was late, late in the evening,\nLate, late in the afternoon,\nThere came a knight to Brown Adam's house,\nAnd he was clad all in brown.",
     source: "Brown Adam (Child 98)",
     time: ["evening", "afternoon"],
     season: [],
@@ -513,10 +389,7 @@ And he was clad all in brown.",
   },
   // --- Johnie Scot (Child 99) ---
   {
-    text: "O up then rose him Johnie Scot,
-An hour before the day,
-And he is on to Fair Ellen's bower,
-To hear what she did say.",
+    text: "O up then rose him Johnie Scot,\nAn hour before the day,\nAnd he is on to Fair Ellen's bower,\nTo hear what she did say.",
     source: "Johnie Scot (Child 99)",
     time: ["night"],
     season: [],
@@ -524,20 +397,14 @@ To hear what she did say.",
   },
   // --- Willie o Winsbury (Child 100) ---
   {
-    text: "He's mounted her on a milk-white steed,
-Himself on a dapple-grey,
-And made her a lady of as much land
-She could ride in a whole summer day.",
+    text: "He's mounted her on a milk-white steed,\nHimself on a dapple-grey,\nAnd made her a lady of as much land\nShe could ride in a whole summer day.",
     source: "Willie o Winsbury (Child 100)",
     time: ["morning", "afternoon"],
     season: ["summer"],
   },
   // --- Rose the Red and White Lily (Child 103) ---
   {
-    text: "She hadna been in fair France
-A twelvemonth and a day,
-Till there she heard the morning drum
-Beat out at break of day.",
+    text: "She hadna been in fair France\nA twelvemonth and a day,\nTill there she heard the morning drum\nBeat out at break of day.",
     source: "Rose the Red and White Lily (Child 103)",
     time: ["morning"],
     season: [],
@@ -545,10 +412,7 @@ Beat out at break of day.",
   },
   // --- The Famous Flower of Serving-Men (Child 106) ---
   {
-    text: "She dressed herself in man's array,
-And to the king's court took her way,
-She rode till she came to the palace gate,
-One morning when it was late.",
+    text: "She dressed herself in man's array,\nAnd to the king's court took her way,\nShe rode till she came to the palace gate,\nOne morning when it was late.",
     source: "The Famous Flower of Serving-Men (Child 106)",
     time: ["morning"],
     season: [],
@@ -556,10 +420,7 @@ One morning when it was late.",
   },
   // --- The Baffled Knight (Child 112) ---
   {
-    text: "As I went out one May morning,
-To view the fields and meadows gay,
-I met a maid came out of the wood,
-And she had lost her way.",
+    text: "As I went out one May morning,\nTo view the fields and meadows gay,\nI met a maid came out of the wood,\nAnd she had lost her way.",
     source: "The Baffled Knight (Child 112)",
     time: ["morning"],
     season: ["spring"],
@@ -567,53 +428,41 @@ And she had lost her way.",
   },
   // --- The Great Silkie of Sule Skerry (Child 113) ---
   {
-    text: "Then one arose at her bed-foot,
-A grumbly guest I'm sure was he.",
+    text: "Then one arose at her bed-foot,\nA grumbly guest I'm sure was he.",
     source: "The Great Silkie of Sule Skerry (Child 113)",
     time: ["night"],
     season: [],
   },
   {
-    text: "And it shall come to pass on a summer's day,
-When the sun shines hot on every stone.",
+    text: "And it shall come to pass on a summer's day,\nWhen the sun shines hot on every stone.",
     source: "The Great Silkie of Sule Skerry (Child 113)",
     time: ["morning", "afternoon"],
     season: ["summer"],
   },
   {
-    text: "And he'll go out on a May morning,
-And he'll kill both my wee son and me.",
+    text: "And he'll go out on a May morning,\nAnd he'll kill both my wee son and me.",
     source: "The Great Silkie of Sule Skerry (Child 113)",
     time: ["morning"],
     season: ["spring"],
   },
   // --- Johnie Cock (Child 114) ---
   {
-    text: "Johnie rose up in a May morning,
-Called for water to wash his hands,
-And he has called for his good gray hounds,
-That lay bound in iron bands.",
+    text: "Johnie rose up in a May morning,\nCalled for water to wash his hands,\nAnd he has called for his good gray hounds,\nThat lay bound in iron bands.",
     source: "Johnie Cock (Child 114)",
     time: ["morning"],
     season: ["spring"],
   },
   // --- Robin Hood and the Monk (Child 119) ---
   {
-    text: "John early in a May morning,
-Looking his shoes upon,
-He took him to Nottingham,
-To matins all alone.",
+    text: "John early in a May morning,\nLooking his shoes upon,\nHe took him to Nottingham,\nTo matins all alone.",
     source: "Robin Hood and the Monk (Child 119)",
     time: ["morning"],
     season: ["spring"],
-    // notes: "Version A. 'morow'→'morning'. 'Much' (the miller's son) rendered as 'John' in this version."
+    // notes: "Version A. 'morow'\u2192'morning'. 'Much' (the miller's son) rendered as 'John' in this version."
   },
   // --- Sir Hugh, or, The Jew's Daughter (Child 155) ---
   {
-    text: "She's taen him to her cellar dark,
-At the hour o midnight keen;
-She's stabbed him with a little penknife,
-And put him in the well sae deep.",
+    text: "She's taen him to her cellar dark,\nAt the hour o midnight keen;\nShe's stabbed him with a little penknife,\nAnd put him in the well sae deep.",
     source: "Sir Hugh, or, The Jew's Daughter (Child 155)",
     time: ["night"],
     season: [],
@@ -621,10 +470,7 @@ And put him in the well sae deep.",
   },
   // --- Durham Field (Child 159) ---
   {
-    text: "The sixth of August the muster was,
-Early in a morning clear;
-Our English archers their bows did bend,
-And many a black blade did appear.",
+    text: "The sixth of August the muster was,\nEarly in a morning clear;\nOur English archers their bows did bend,\nAnd many a black blade did appear.",
     source: "Durham Field (Child 159)",
     time: ["morning"],
     season: [],
@@ -632,30 +478,21 @@ And many a black blade did appear.",
   },
   // --- The Battle of Otterburn (Child 161) ---
   {
-    text: "It fell about the Lammas tide,
-When the muir-men win their hay,
-The doughty Douglas bound him to ride
-Into England, to drive a prey.",
+    text: "It fell about the Lammas tide,\nWhen the muir-men win their hay,\nThe doughty Douglas bound him to ride\nInto England, to drive a prey.",
     source: "The Battle of Otterburn (Child 161)",
     time: ["morning", "afternoon"],
     season: ["autumn"],
     // notes: "Version C stanza 1. Lammas = early August harvest festival. No modernisation needed."
   },
   {
-    text: "But up then spake a little page,
-Before the peep of dawn:
-O waken ye, waken ye, my good lord,
-For Percy's hard at hand.",
+    text: "But up then spake a little page,\nBefore the peep of dawn:\nO waken ye, waken ye, my good lord,\nFor Percy's hard at hand.",
     source: "The Battle of Otterburn (Child 161)",
     time: ["night"],
     season: [],
     // notes: "Version C stanza 17. No modernisation needed."
   },
   {
-    text: "This deed was done at Otterburn,
-About the breaking of the day;
-Earl Douglas was buried at the bracken-bush,
-And Percy led captive away.",
+    text: "This deed was done at Otterburn,\nAbout the breaking of the day;\nEarl Douglas was buried at the bracken-bush,\nAnd Percy led captive away.",
     source: "The Battle of Otterburn (Child 161)",
     time: ["morning"],
     season: [],
@@ -663,105 +500,74 @@ And Percy led captive away.",
   },
   // --- Sir Andrew Barton (Child 167) ---
   {
-    text: "As it befell in midsummer-time,
-When birds sing sweetly on every tree.",
+    text: "As it befell in midsummer-time,\nWhen birds sing sweetly on every tree.",
     source: "Sir Andrew Barton (Child 167)",
     time: ["morning"],
     season: ["summer"],
   },
   {
-    text: "When Flora, with her fragrant flowers,
-Bedecked the earth so trim and gay,
-And Neptune, with his dainty showers,
-Came to present the month of May.",
+    text: "When Flora, with her fragrant flowers,\nBedecked the earth so trim and gay,\nAnd Neptune, with his dainty showers,\nCame to present the month of May.",
     source: "Sir Andrew Barton (Child 167)",
     time: ["morning", "afternoon"],
     season: ["spring"],
   },
   {
-    text: "Lord Howard then, of courage bold,
-Went to the sea with pleasant cheer,
-Not curbed with winter's piercing cold,
-Though it was the stormy time of the year.",
+    text: "Lord Howard then, of courage bold,\nWent to the sea with pleasant cheer,\nNot curbed with winter's piercing cold,\nThough it was the stormy time of the year.",
     source: "Sir Andrew Barton (Child 167)",
     time: ["morning", "afternoon"],
     season: ["winter"],
   },
   {
-    text: "With pikes, and guns, and bowmen bold,
-This noble Howard is gone to the sea,
-On the day before Midsummer's Eve,
-And out at Thames mouth sailed they.",
+    text: "With pikes, and guns, and bowmen bold,\nThis noble Howard is gone to the sea,\nOn the day before Midsummer's Eve,\nAnd out at Thames mouth sailed they.",
     source: "Sir Andrew Barton (Child 167)",
     time: ["evening"],
     season: ["summer"],
   },
   // --- Mary Hamilton (Child 173) ---
   {
-    text: "Last night Queen Mary had four Maries,
-This night she'll have but three;
-There was Mary Seaton and Mary Beaton,
-And Mary Carmichael, and me.",
+    text: "Last night Queen Mary had four Maries,\nThis night she'll have but three;\nThere was Mary Seaton and Mary Beaton,\nAnd Mary Carmichael, and me.",
     source: "Mary Hamilton (Child 173)",
     time: ["night"],
     season: [],
   },
   {
-    text: "Last night I washed Queen Mary's feet,
-And bore her to her bed;
-This day she's given me my reward,
-This gallows-tree to tread.",
+    text: "Last night I washed Queen Mary's feet,\nAnd bore her to her bed;\nThis day she's given me my reward,\nThis gallows-tree to tread.",
     source: "Mary Hamilton (Child 173)",
     time: ["morning", "afternoon"],
     season: [],
   },
   // --- The Death of Parcy Reed (Child 193) ---
   {
-    text: "They hunted high, they hunted low,
-They hunted up, they hunted down,
-Until the day was past the prime,
-And it grew late in the afternoon.",
+    text: "They hunted high, they hunted low,\nThey hunted up, they hunted down,\nUntil the day was past the prime,\nAnd it grew late in the afternoon.",
     source: "The Death of Parcy Reed (Child 193)",
     time: ["afternoon"],
     season: [],
   },
   // --- The Gypsy Laddie (Child 200) ---
   {
-    text: "Yestreen I lay in a well-made bed,
-And my good lord beside me;
-This night I'll lie in a tenant's barn,
-Whatever shall betide me.",
+    text: "Yestreen I lay in a well-made bed,\nAnd my good lord beside me;\nThis night I'll lie in a tenant's barn,\nWhatever shall betide me.",
     source: "The Gypsy Laddie (Child 200)",
     time: ["night"],
     season: [],
     // notes: "Version A stanza 4. 'yestreen'=last night. No modernisation needed."
   },
   {
-    text: "Now when our lord came home at even,
-He speired for his fair lady;
-The ane she cried, the tither replied,
-She's awa wi the gypsy laddie.",
+    text: "Now when our lord came home at even,\nHe speired for his fair lady;\nThe ane she cried, the tither replied,\nShe's awa wi the gypsy laddie.",
     source: "The Gypsy Laddie (Child 200)",
     time: ["evening"],
     season: [],
-    // notes: "Version F stanza 8. 'een'→'even'. 'speired'=asked."
+    // notes: "Version F stanza 8. 'een'\u2192'even'. 'speired'=asked."
   },
   // --- Jamie Douglas (Child 204) ---
   {
-    text: "In the morning when I arose,
-My bonnie palace for to see,
-I came unto my lord's room-door,
-But he would not speak one word to me.",
+    text: "In the morning when I arose,\nMy bonnie palace for to see,\nI came unto my lord's room-door,\nBut he would not speak one word to me.",
     source: "Jamie Douglas (Child 204)",
     time: ["morning"],
     season: [],
     // notes: "Version G stanza 6. No modernisation needed."
   },
   {
-    text: "O waly, waly up the bank!
-And waly, waly down the brae!
-And waly, waly by yon burn-side,
-Where me and my love were wont to gae!",
+    text: "O waly, waly up the bank!\nAnd waly, waly down the brae!\nAnd waly, waly by yon burn-side,\nWhere me and my love were wont to gae!",
     source: "Jamie Douglas (Child 204)",
     time: ["morning", "afternoon"],
     season: [],
@@ -769,21 +575,15 @@ Where me and my love were wont to gae!",
   },
   // --- The Braes o Yarrow (Child 214) ---
   {
-    text: "Late in the evening, drinking the wine,
-Or early in the morning,
-They set a combat them between,
-To fight it out in the dawning.",
+    text: "Late in the evening, drinking the wine,\nOr early in the morning,\nThey set a combat them between,\nTo fight it out in the dawning.",
     source: "The Braes o Yarrow (Child 214)",
     time: ["evening", "morning"],
     season: [],
-    // notes: "Version F stanza 1. 'eenin'→'evening'."
+    // notes: "Version F stanza 1. 'eenin'\u2192'evening'."
   },
   // --- The Daemon Lover (Child 243) ---
   {
-    text: "O sleep ye, wake ye, my husband?
-I wish ye wake in time!
-I would not for ten thousand pounds
-This night ye knew my mind.",
+    text: "O sleep ye, wake ye, my husband?\nI wish ye wake in time!\nI would not for ten thousand pounds\nThis night ye knew my mind.",
     source: "The Daemon Lover (Child 243)",
     time: ["night"],
     season: [],
@@ -791,20 +591,14 @@ This night ye knew my mind.",
   },
   // --- The Grey Cock (Child 248) ---
   {
-    text: "It's now ten at night, and the stars give no light,
-And the bells they ring ding, dang;
-He's met with some delay that caused him to stay,
-But he will be here ere lang.",
+    text: "It's now ten at night, and the stars give no light,\nAnd the bells they ring ding, dang;\nHe's met with some delay that caused him to stay,\nBut he will be here ere lang.",
     source: "The Grey Cock (Child 248)",
     time: ["night"],
     season: [],
-    // notes: "Version A stanza 2. 'gie'→'give'. 'ere lang'=before long."
+    // notes: "Version A stanza 2. 'gie'\u2192'give'. 'ere lang'=before long."
   },
   {
-    text: "Flee, flee up, my bonny grey cock,
-And crow when it is day;
-Your neck shall be like the bonny beaten gold,
-And your wings of the silver grey.",
+    text: "Flee, flee up, my bonny grey cock,\nAnd crow when it is day;\nYour neck shall be like the bonny beaten gold,\nAnd your wings of the silver grey.",
     source: "The Grey Cock (Child 248)",
     time: ["morning"],
     season: [],
@@ -812,10 +606,7 @@ And your wings of the silver grey.",
   },
   // --- Henry Martyn (Child 250) ---
   {
-    text: "He had not been sailing but a short winter's night,
-And part of a short winter's day,
-When he espied a lofty ship,
-Come sailing all along that way.",
+    text: "He had not been sailing but a short winter's night,\nAnd part of a short winter's day,\nWhen he espied a lofty ship,\nCome sailing all along that way.",
     source: "Henry Martyn (Child 250)",
     time: ["night", "morning", "afternoon"],
     season: ["winter"],
@@ -823,10 +614,7 @@ Come sailing all along that way.",
   },
   // --- The Kitchie Boy (Child 252) ---
   {
-    text: "The day it is gone, and the night's come on,
-And the King's court it is begun;
-All the ladies in the court are going to bed,
-And it's time that I were gone.",
+    text: "The day it is gone, and the night's come on,\nAnd the King's court it is begun;\nAll the ladies in the court are going to bed,\nAnd it's time that I were gone.",
     source: "The Kitchie Boy (Child 252)",
     time: ["evening"],
     season: [],
@@ -834,10 +622,7 @@ And it's time that I were gone.",
   },
   // --- Willie's Lyke-Wake (Child 255) ---
   {
-    text: "About the dead hour of the night
-She heard the bridles ring;
-And Janet was as glad of that
-As any earthly thing.",
+    text: "About the dead hour of the night\nShe heard the bridles ring;\nAnd Janet was as glad of that\nAs any earthly thing.",
     source: "Willie's Lyke-Wake (Child 255)",
     time: ["night"],
     season: [],
@@ -845,22 +630,15 @@ As any earthly thing.",
   },
   // --- The Knight's Ghost (Child 265) ---
   {
-    text: "She looked over her castle wall,
-To see what she might see;
-She spied her own dear lord
-Come riding over the lee,
-At the dead hour of the night.",
+    text: "She looked over her castle wall,\nTo see what she might see;\nShe spied her own dear lord\nCome riding over the lee,\nAt the dead hour of the night.",
     source: "The Knight's Ghost (Child 265)",
     time: ["night"],
     season: [],
-    // notes: "'deid'→'dead'. No other modernisation."
+    // notes: "'deid'\u2192'dead'. No other modernisation."
   },
   // --- The Suffolk Miracle (Child 272) ---
   {
-    text: "A young man riding in the night,
-His journey for to take,
-He rode until the morning light,
-For his true love's sake.",
+    text: "A young man riding in the night,\nHis journey for to take,\nHe rode until the morning light,\nFor his true love's sake.",
     source: "The Suffolk Miracle (Child 272)",
     time: ["night", "morning"],
     season: [],
@@ -868,8 +646,7 @@ For his true love's sake.",
   },
   // --- The Keach i the Creel (Child 281) ---
   {
-    text: "But the night was dark, and the way was sair,
-And the morn came up on them unaware.",
+    text: "But the night was dark, and the way was sair,\nAnd the morn came up on them unaware.",
     source: "The Keach i the Creel (Child 281)",
     time: ["night", "morning"],
     season: [],
@@ -877,10 +654,7 @@ And the morn came up on them unaware.",
   },
   // --- Trooper and Maid (Child 299) ---
   {
-    text: "When the trumpet sounds to horse and away,
-Early in the morning,
-Leave thy bed and leave thy beau,
-Early in the morning.",
+    text: "When the trumpet sounds to horse and away,\nEarly in the morning,\nLeave thy bed and leave thy beau,\nEarly in the morning.",
     source: "Trooper and Maid (Child 299)",
     time: ["morning"],
     season: [],
@@ -888,15 +662,7 @@ Early in the morning.",
   },
   // --- The Broom of Cowdenknows (Child 305) ---
   {
-    text: "There was a troop of merry gentlemen
-Were riding tween twa knowes;
-They swore they smelled a bonny lass,
-As they came by the broom of Cowdenknows.
-It's up then spake the foremost man,
-Said, I see her standing there;
-A bonny lass in a green mantle,
-Combing down her yellow hair,
-Early on a May morning.",
+    text: "There was a troop of merry gentlemen\nWere riding tween twa knowes;\nThey swore they smelled a bonny lass,\nAs they came by the broom of Cowdenknows.\nIt's up then spake the foremost man,\nSaid, I see her standing there;\nA bonny lass in a green mantle,\nCombing down her yellow hair,\nEarly on a May morning.",
     source: "The Broom of Cowdenknows (Child 305)",
     time: ["morning"],
     season: ["spring"],

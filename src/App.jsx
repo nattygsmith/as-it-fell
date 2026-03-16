@@ -20,6 +20,7 @@ const DEV_MODE = false;
 //    notes    — modernization notes (not shown in UI, for your records)
 // ============================================================
 const QUOTES = [
+  // ── child-ballads (─────────────────────────────────────)
   // --- Riddles Wisely Expounded (Child 1) ---
   {
     text: "He knocked at the lady's gate,\nOne evening when it was late.",
@@ -62,16 +63,6 @@ const QUOTES = [
     lyricsKey: "child4",
     stanzaIndex: 13,
   },
-  // --- The Fair Flower of Northumberland (Child 9) ---
-  {
-    text: "Thus rode she all one winter's night,\nTill Edenborow they saw in sight.",
-    source: "The Fair Flower of Northumberland (Child 9)",
-    time: ["night"],
-    season: ["winter"],
-    lyricsKey: "child9",
-    stanzaIndex: 17,
-    // notes: "Child 9 = The Fair Flower of Northumberland (not The Fause Knight, a common mix-up). No modernization needed."
-  },
   // --- The Three Ravens (Child 26) ---
   {
     text: "The one of them said to his mate,\n'Where shall we our breakfast take?'",
@@ -97,16 +88,6 @@ const QUOTES = [
     season: ["autumn"],
     lyricsKey: "child35",
     stanzaIndex: 11,
-  },
-  // --- Thomas Rymer (Child 37) ---
-  {
-    text: "And see not ye that bonny road,\nWhich winds about the fernie brae?\nThat is the road to fair Elfland,\nWhere you and I this night maun gae.",
-    source: "Thomas Rymer (Child 37)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child37",
-    stanzaIndex: 13,
-    // notes: "Version A stanza 14. No modernization needed."
   },
   // --- Tam Lin (Child 39) ---
   {
@@ -141,16 +122,6 @@ const QUOTES = [
     lyricsKey: "child39",
     stanzaIndex: 26,
   },
-  // --- Clerk Colvill (Child 42) ---
-  {
-    text: "And he is on to Clyde's water,\nBy the lee light of the moon.",
-    source: "Clerk Colvill (Child 42)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child42",
-    stanzaIndex: 12,
-    // notes: "Version C stanza 5. 'An'→'And', 'licht'→'light', 'o'→'of'."
-  },
   // --- The Broomfield Hill (Child 43) ---
   {
     text: "The one rode early in the morning,\nThe other in the afternoon.",
@@ -168,38 +139,6 @@ const QUOTES = [
     lyricsKey: "child43",
     stanzaIndex: 7,
   },
-  // --- Captain Wedderburn's Courtship (Child 46) ---
-  // Quote #46 retired: "The moon shone bright, and it cast a fair light."
-  // Misattributed — line is from The Moon Shines Bright (The Bellman's Song, Roud 702),
-  // a traditional English carol, not a Child Ballad.
-  // --- Proud Lady Margaret (Child 47) ---
-  {
-    text: "Twas on a night, an evening bright,\nWhen the dew began to fall,\nLady Margaret was walking up and down,\nLooking o'er her castle wall.",
-    source: "Proud Lady Margaret (Child 47)",
-    time: ["evening"],
-    season: [],
-    lyricsKey: "child47",
-    stanzaIndex: 0,
-    // notes: "Version A stanza 1. 'fa'\u2192'fall'."
-  },
-  {
-    text: "There was a knight, in a summer's night,\nAppeared in a lady's hall,\nAs she was walking up and down,\nLooking o'er her castle wall.",
-    source: "Proud Lady Margaret (Child 47)",
-    time: ["night"],
-    season: ["summer"],
-    lyricsKey: "child47",
-    stanzaIndex: 18,
-    // notes: "Version B stanza 1. No modernization needed."
-  },
-  // --- The Bonny Hind (Child 50) ---
-  {
-    text: "It's May she comes and May she goes,\nDown by the garden green,\nIt's there she spied a good young squire,\nAs good as e'er she seen.",
-    source: "The Bonny Hind (Child 50)",
-    time: ["morning", "afternoon"],
-    season: ["spring"],
-    lyricsKey: "child50",
-    stanzaIndex: 0,
-  },
   // --- Sir Patrick Spens (Child 58) ---
   {
     text: "Late late last night I saw the new moon,\nWith the old moon in her arm;\nAnd I fear, I fear, my dear master,\nThat we will come to harm.",
@@ -208,44 +147,6 @@ const QUOTES = [
     season: ["winter"],
     lyricsKey: "child58",
     stanzaIndex: 6,
-  },
-  // --- Child Waters (Child 63) ---
-  {
-    text: "Lord John's mother in her bower\nWas sitting all alone;\nWhen in the silence of the night\nShe heard fair Ellen's moan.",
-    source: "Child Waters (Child 63)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child63",
-    stanzaIndex: 7,
-  },
-  // --- Clerk Saunders (Child 69) ---
-  {
-    text: "They baith lay still, and slept sound,\nUntil the sun began to sheen;\nShe drew the curtains a wee bit,\nAnd dull and drowsy was his een.",
-    source: "Clerk Saunders (Child 69)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child69",
-    stanzaIndex: 16,
-    // notes: "een = Scots for 'eyes'. Light modernisation: sleeped\u2192slept, Untill\u2192Until, drowsie\u2192drowsy."
-  },
-  // --- Willie and Lady Maisry (Child 70) ---
-  {
-    text: "You must come into my bower\nWhen the evening bells do ring,\nAnd you must come into my bower\nWhen the evening mass doth sing.",
-    source: "Willie and Lady Maisry (Child 70)",
-    time: ["evening"],
-    season: [],
-    lyricsKey: "child70",
-    stanzaIndex: 3,
-  },
-  // --- The Clerk's Twa Sons o Owsenford (Child 72) ---
-  {
-    text: "The bonny clerks they died that morn,\nTheir loves died lang ere noon.",
-    source: "The Clerk's Twa Sons o Owsenford (Child 72)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child72",
-    stanzaIndex: 13,
-    // notes: "'clerks'=scholars/students. 'lang ere noon'=long before noon. No modernization: 'lang' kept for Scots sound."
   },
   // --- Lord Thomas and Annet (Child 73) ---
   {
@@ -282,25 +183,6 @@ const QUOTES = [
     lyricsKey: "child76",
     stanzaIndex: 6,
   },
-  {
-    text: "When the cock had crawn, and day did dawn,\nAnd the sun began to peep,\nThen it rose him Love Gregor,\nAnd sorely did he weep.",
-    source: "The Lass of Roch Royal (Child 76)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child76",
-    stanzaIndex: 9,
-    // notes: "Version F. 'raise'\u2192'rose'; 'sair, sair'\u2192'sorely'. New stanza \u2014 distinct from existing #18 and #19 from same ballad."
-  },
-  // --- Sweet William's Ghost (Child 77) ---
-  {
-    text: "O cocks are crowing at merry midnight,\nAnd the wild fowls herald the day;\nGive me my faith and troth again,\nAnd let me fare me on my way.",
-    source: "Sweet William's Ghost (Child 77)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child77",
-    stanzaIndex: 9,
-    // notes: "Modernised: 'a merry midnight'\u2192'at merry midnight'; 'are boding day'\u2192'herald the day'."
-  },
   // --- The Unquiet Grave (Child 78) ---
   {
     text: "The wind does blow today, my love,\nAnd a few small drops of rain;\nI never had but one true-love,\nIn a cold grave she was lain.",
@@ -335,34 +217,6 @@ const QUOTES = [
     lyricsKey: "child79",
     stanzaIndex: 7,
   },
-  {
-    text: "Up then crew the red, red cock,\nAnd up and crew the gray;\nThe eldest to the youngest said,\n'Tis time we were away.",
-    source: "The Wife of Usher's Well (Child 79)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child79",
-    stanzaIndex: 8,
-    // notes: "Kept alongside #24 — different stanza, different texture. #24 is warm and narrative; this is abrupt and elegiac."
-  },
-  {
-    text: "It fell about the Martinmas,\nWhen nights are lang and mirk,\nThe carlin wife's three sons came home,\nAnd their hats were of the birch.",
-    source: "The Wife of Usher's Well (Child 79)",
-    time: ["night"],
-    season: ["winter"],
-    lyricsKey: "child79",
-    stanzaIndex: 0,
-    // notes: "Replaces retired #22 (two-line fragment). hame→home; o the birk→of the birch. 'carlin'=old woman; 'mirk'=dark. Hats of birch signal the sons have come from Paradise."
-  },
-  // --- Old Robin of Portingale (Child 80) ---
-  {
-    text: "And about the middle time of the night\nCame twenty-four good knights in;\nSir Gyles he was the foremost man,\nSo well he knew that gin.",
-    source: "Old Robin of Portingale (Child 80)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child80",
-    stanzaIndex: 22,
-    // notes: "Stanza 23. Light spelling modernisation only. 'gin' = scheme/trap."
-  },
   // --- Little Musgrave and Lady Barnard (Child 81) ---
   {
     text: "When supper was over, and mass was sung,\nAnd every man bound for bed,\nLittle Musgrave and that lady\nIn one chamber were laid.",
@@ -371,35 +225,6 @@ const QUOTES = [
     season: [],
     lyricsKey: "child81",
     stanzaIndex: 13,
-  },
-  {
-    text: "Methinks I hear the thresel-cock,\nMethinks I hear the jay;\nMethinks I hear my lord Barnard,\nAnd I would I were away.",
-    source: "Little Musgrave and Lady Barnard (Child 81)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child81",
-    stanzaIndex: 14,
-    // notes: "thresel=throstle (song thrush). jaye\u2192jay. Kept 'thresel' for atmosphere."
-  },
-  // --- The Bonny Birdy (Child 82) ---
-  {
-    text: "There was a knight, in a summer's night,\nWas riding o'er the lee,\nAnd there he saw a bonny birdy,\nWas singing upon a tree.",
-    source: "The Bonny Birdy (Child 82)",
-    time: ["night"],
-    season: ["summer"],
-    lyricsKey: "child82",
-    stanzaIndex: 0,
-    // notes: "Version A stanza 1. 'oer'\u2192'o'er'. Opening line shared with Child 47 Version B (#45) \u2014 different ballads, accepted."
-  },
-  // --- Child Maurice (Child 83) ---
-  {
-    text: "The one was killed in the morning air,\nHis mother died at eve,\nAnd ere the morning bells were rung,\nThe threesome were all gone.",
-    source: "Child Maurice (Child 83)",
-    time: ["morning", "evening"],
-    season: [],
-    lyricsKey: "child83",
-    stanzaIndex: 22,
-    // notes: "Version D stanza 30. 'mornin'\u2192'morning' (twice); 'een'\u2192'eve'; 'or'\u2192'ere'; 'was rung'\u2192'were rung'; 'a gane'\u2192'all gone'."
   },
   // --- Bonny Barbara Allan (Child 84) ---
   {
@@ -426,75 +251,6 @@ const QUOTES = [
     lyricsKey: "child84",
     stanzaIndex: 10,
   },
-  // --- Lady Alice (Child 85) ---
-  {
-    text: "Lady Alice was sitting in her bower-window,\nMending her midnight coif,\nAnd there she saw as fine a corpse\nAs ever she saw in her life.",
-    source: "Lady Alice (Child 85)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child85",
-    stanzaIndex: 0,
-    // notes: "Version A stanza 1. 'quoif'\u2192'coif'."
-  },
-  {
-    text: "O lay him down gently, ye six men tall,\nAll on the grass so green,\nAnd tomorrow, when the sun goes down,\nLady Alice a corpse shall be seen.",
-    source: "Lady Alice (Child 85)",
-    time: ["evening"],
-    season: [],
-    lyricsKey: "child85",
-    stanzaIndex: 2,
-    // notes: "Version A stanza 3. No modernisation needed."
-  },
-  // --- Young Benjie (Child 86) ---
-  {
-    text: "And he was stout, and proud-hearted,\nAnd thought it bitterly,\nAnd he's gone by the wan moonlight\nTo meet his Marjorie.",
-    source: "Young Benjie (Child 86)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child86",
-    stanzaIndex: 3,
-    // notes: "Version A stanza 4. 'ot'\u2192'it'; 'hes gaen'\u2192'he's gone'."
-  },
-  // --- Jellon Grame (Child 90) ---
-  {
-    text: "Win up, my bonny boy, he says,\nAs quick as ever you may;\nFor ye maun gang for Lillie Flower,\nBefore the break of day.",
-    source: "Jellon Grame (Child 90)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child90",
-    stanzaIndex: 1,
-    // notes: "Stanza 2. 'eer'\u2192'ever'."
-  },
-  // --- The Gay Goshawk (Child 96) ---
-  {
-    text: "And well he knew that lady fair\nAmong her maidens free,\nFor the flower that springs in May morning\nWas not so sweet as she.",
-    source: "The Gay Goshawk (Child 96)",
-    time: ["morning"],
-    season: ["spring"],
-    lyricsKey: "child96",
-    stanzaIndex: 11,
-    // notes: "Version E stanza 12. 'kent'\u2192'knew'; 'ladye feir'\u2192'lady fair'."
-  },
-  // --- Brown Adam (Child 98) ---
-  {
-    text: "It was late, late in the evening,\nLate, late in the afternoon,\nThere came a knight to Brown Adam's house,\nAnd he was clad all in brown.",
-    source: "Brown Adam (Child 98)",
-    time: ["evening", "afternoon"],
-    season: [],
-    lyricsKey: "child98",
-    stanzaIndex: 0,
-    // notes: "Opening stanza. No modernisation needed."
-  },
-  // --- Johnie Scot (Child 99) ---
-  {
-    text: "O up then rose him Johnie Scot,\nAn hour before the day,\nAnd he is on to Fair Ellen's bower,\nTo hear what she did say.",
-    source: "Johnie Scot (Child 99)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child99",
-    stanzaIndex: 2,
-    // notes: "Version A. Pre-dawn rising stanza. No modernisation needed."
-  },
   // --- Willie o Winsbury (Child 100) ---
   {
     text: "He's mounted her on a milk-white steed,\nHimself on a dapple-grey,\nAnd made her a lady of as much land\nShe could ride in a whole summer day.",
@@ -503,36 +259,6 @@ const QUOTES = [
     season: ["summer"],
     lyricsKey: "child100",
     stanzaIndex: 12,
-  },
-  // --- Rose the Red and White Lily (Child 103) ---
-  {
-    text: "She hadna been in fair France\nA twelvemonth and a day,\nTill there she heard the morning drum\nBeat out at break of day.",
-    source: "Rose the Red and White Lily (Child 103)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child103",
-    stanzaIndex: 13,
-    // notes: "No modernisation needed."
-  },
-  // --- The Famous Flower of Serving-Men (Child 106) ---
-  {
-    text: "She dressed herself in man's array,\nAnd to the king's court took her way,\nShe rode till she came to the palace gate,\nOne morning when it was late.",
-    source: "The Famous Flower of Serving-Men (Child 106)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child106",
-    stanzaIndex: 4,
-    // notes: "No modernisation needed."
-  },
-  // --- The Baffled Knight (Child 112) ---
-  {
-    text: "As I went out one May morning,\nTo view the fields and meadows gay,\nI met a maid came out of the wood,\nAnd she had lost her way.",
-    source: "The Baffled Knight (Child 112)",
-    time: ["morning"],
-    season: ["spring"],
-    lyricsKey: "child112",
-    stanzaIndex: 0,
-    // notes: "No modernisation needed."
   },
   // --- The Great Silkie of Sule Skerry (Child 113) ---
   {
@@ -567,64 +293,6 @@ const QUOTES = [
     season: ["spring"],
     lyricsKey: "child114",
     stanzaIndex: 0,
-  },
-  // --- Robin Hood and the Monk (Child 119) ---
-  {
-    text: "John early in a May morning,\nLooking his shoes upon,\nHe took him to Nottingham,\nTo matins all alone.",
-    source: "Robin Hood and the Monk (Child 119)",
-    time: ["morning"],
-    season: ["spring"],
-    lyricsKey: "child119",
-    stanzaIndex: 8,
-    // notes: "Version A. 'morow'\u2192'morning'. 'Much' (the miller's son) rendered as 'John' in this version."
-  },
-  // --- Sir Hugh, or, The Jew's Daughter (Child 155) ---
-  {
-    text: "She's taen him to her cellar dark,\nAt the hour o midnight keen;\nShe's stabbed him with a little penknife,\nAnd put him in the well sae deep.",
-    source: "Sir Hugh, or, The Jew's Daughter (Child 155)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child155",
-    stanzaIndex: 7,
-    // notes: "Version B. 'o midnight keen' = of sharp/bitter midnight. No modernisation needed."
-  },
-  // --- Durham Field (Child 159) ---
-  {
-    text: "The sixth of August the muster was,\nEarly in a morning clear;\nOur English archers their bows did bend,\nAnd many a black blade did appear.",
-    source: "Durham Field (Child 159)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child159",
-    stanzaIndex: 0,
-    // notes: "'black blade' substituted for 'black bill' (a pole weapon with blackened blade) for readability. No other modernisation."
-  },
-  // --- The Battle of Otterburn (Child 161) ---
-  {
-    text: "It fell about the Lammas tide,\nWhen the muir-men win their hay,\nThe doughty Douglas bound him to ride\nInto England, to drive a prey.",
-    source: "The Battle of Otterburn (Child 161)",
-    time: ["morning", "afternoon"],
-    season: ["autumn"],
-    lyricsKey: "child161",
-    stanzaIndex: 0,
-    // notes: "Version C stanza 1. Lammas = early August harvest festival. No modernisation needed."
-  },
-  {
-    text: "But up then spake a little page,\nBefore the peep of dawn:\nO waken ye, waken ye, my good lord,\nFor Percy's hard at hand.",
-    source: "The Battle of Otterburn (Child 161)",
-    time: ["night"],
-    season: [],
-    lyricsKey: "child161",
-    stanzaIndex: 13,
-    // notes: "Version C stanza 17. No modernisation needed."
-  },
-  {
-    text: "This deed was done at Otterburn,\nAbout the breaking of the day;\nEarl Douglas was buried at the bracken-bush,\nAnd Percy led captive away.",
-    source: "The Battle of Otterburn (Child 161)",
-    time: ["morning"],
-    season: [],
-    lyricsKey: "child161",
-    stanzaIndex: 17,
-    // notes: "Version B stanza 14. No modernisation needed."
   },
   // --- Sir Andrew Barton (Child 167) ---
   {
@@ -685,24 +353,257 @@ const QUOTES = [
     lyricsKey: "child193",
     stanzaIndex: 3,
   },
-  // --- The Gypsy Laddie (Child 200) ---
+  // --- Thomas Rymer (Child 37) ---
   {
-    text: "Yestreen I lay in a well-made bed,\nAnd my good lord beside me;\nThis night I'll lie in a tenant's barn,\nWhatever shall betide me.",
-    source: "The Gypsy Laddie (Child 200)",
+    text: "And see not ye that bonny road,\nWhich winds about the fernie brae?\nThat is the road to fair Elfland,\nWhere you and I this night maun gae.",
+    source: "Thomas Rymer (Child 37)",
     time: ["night"],
     season: [],
-    lyricsKey: "child200",
-    stanzaIndex: 3,
-    // notes: "Version A stanza 4. 'yestreen'=last night. No modernisation needed."
+    lyricsKey: "child37",
+    stanzaIndex: 13,
+    // notes: "Version A stanza 14. No modernization needed."
   },
+  // --- The Fair Flower of Northumberland (Child 9) ---
   {
-    text: "Now when our lord came home at even,\nHe speired for his fair lady;\nThe ane she cried, the tither replied,\nShe's awa wi the gypsy laddie.",
-    source: "The Gypsy Laddie (Child 200)",
+    text: "Thus rode she all one winter's night,\nTill Edenborow they saw in sight.",
+    source: "The Fair Flower of Northumberland (Child 9)",
+    time: ["night"],
+    season: ["winter"],
+    lyricsKey: "child9",
+    stanzaIndex: 17,
+    // notes: "Child 9 = The Fair Flower of Northumberland (not The Fause Knight, a common mix-up). No modernization needed."
+  },
+  // --- Clerk Colvill (Child 42) ---
+  {
+    text: "And he is on to Clyde's water,\nBy the lee light of the moon.",
+    source: "Clerk Colvill (Child 42)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child42",
+    stanzaIndex: 12,
+    // notes: "Version C stanza 5. 'An'→'And', 'licht'→'light', 'o'→'of'."
+  },
+  // --- Proud Lady Margaret (Child 47) ---
+  {
+    text: "Twas on a night, an evening bright,\nWhen the dew began to fall,\nLady Margaret was walking up and down,\nLooking o'er her castle wall.",
+    source: "Proud Lady Margaret (Child 47)",
     time: ["evening"],
     season: [],
-    lyricsKey: "child200",
+    lyricsKey: "child47",
+    stanzaIndex: 0,
+    // notes: "Version A stanza 1. 'fa'→'fall'."
+  },
+  {
+    text: "There was a knight, in a summer's night,\nAppeared in a lady's hall,\nAs she was walking up and down,\nLooking o'er her castle wall.",
+    source: "Proud Lady Margaret (Child 47)",
+    time: ["night"],
+    season: ["summer"],
+    lyricsKey: "child47",
+    stanzaIndex: 18,
+    // notes: "Version B stanza 1. No modernization needed."
+  },
+  // --- The Bonny Hind (Child 50) ---
+  {
+    text: "It's May she comes and May she goes,\nDown by the garden green,\nIt's there she spied a good young squire,\nAs good as e'er she seen.",
+    source: "The Bonny Hind (Child 50)",
+    time: ["morning", "afternoon"],
+    season: ["spring"],
+    lyricsKey: "child50",
+    stanzaIndex: 0,
+  },
+  // --- Child Waters (Child 63) ---
+  {
+    text: "Lord John's mother in her bower\nWas sitting all alone;\nWhen in the silence of the night\nShe heard fair Ellen's moan.",
+    source: "Child Waters (Child 63)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child63",
     stanzaIndex: 7,
-    // notes: "Version F stanza 8. 'een'\u2192'even'. 'speired'=asked."
+  },
+  // --- Clerk Saunders (Child 69) ---
+  {
+    text: "They baith lay still, and slept sound,\nUntil the sun began to sheen;\nShe drew the curtains a wee bit,\nAnd dull and drowsy was his een.",
+    source: "Clerk Saunders (Child 69)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child69",
+    stanzaIndex: 16,
+    // notes: "een = Scots for 'eyes'. Light modernisation: sleeped→slept, Untill→Until, drowsie→drowsy."
+  },
+  // --- Willie and Lady Maisry (Child 70) ---
+  {
+    text: "You must come into my bower\nWhen the evening bells do ring,\nAnd you must come into my bower\nWhen the evening mass doth sing.",
+    source: "Willie and Lady Maisry (Child 70)",
+    time: ["evening"],
+    season: [],
+    lyricsKey: "child70",
+    stanzaIndex: 3,
+  },
+  // --- Sweet William's Ghost (Child 77) ---
+  {
+    text: "O cocks are crowing at merry midnight,\nAnd the wild fowls herald the day;\nGive me my faith and troth again,\nAnd let me fare me on my way.",
+    source: "Sweet William's Ghost (Child 77)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child77",
+    stanzaIndex: 9,
+    // notes: "Modernised: 'a merry midnight'→'at merry midnight'; 'are boding day'→'herald the day'."
+  },
+  // --- The Wife of Usher's Well (Child 79) ---
+  {
+    text: "Up then crew the red, red cock,\nAnd up and crew the gray;\nThe eldest to the youngest said,\n'Tis time we were away.",
+    source: "The Wife of Usher's Well (Child 79)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child79",
+    stanzaIndex: 8,
+    // notes: "Kept alongside #24 — different stanza, different texture. #24 is warm and narrative; this is abrupt and elegiac."
+  },
+  {
+    text: "It fell about the Martinmas,\nWhen nights are lang and mirk,\nThe carlin wife's three sons came home,\nAnd their hats were of the birch.",
+    source: "The Wife of Usher's Well (Child 79)",
+    time: ["night"],
+    season: ["winter"],
+    lyricsKey: "child79",
+    stanzaIndex: 0,
+    // notes: "Replaces retired #22 (two-line fragment). hame→home; o the birk→of the birch. 'carlin'=old woman; 'mirk'=dark. Hats of birch signal the sons have come from Paradise."
+  },
+  // --- Little Musgrave and Lady Barnard (Child 81) ---
+  {
+    text: "Methinks I hear the thresel-cock,\nMethinks I hear the jay;\nMethinks I hear my lord Barnard,\nAnd I would I were away.",
+    source: "Little Musgrave and Lady Barnard (Child 81)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child81",
+    stanzaIndex: 14,
+    // notes: "thresel=throstle (song thrush). jaye→jay. Kept 'thresel' for atmosphere."
+  },
+  // --- The Clerk's Twa Sons o Owsenford (Child 72) ---
+  {
+    text: "The bonny clerks they died that morn,\nTheir loves died lang ere noon.",
+    source: "The Clerk's Twa Sons o Owsenford (Child 72)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child72",
+    stanzaIndex: 13,
+    // notes: "'clerks'=scholars/students. 'lang ere noon'=long before noon. No modernization: 'lang' kept for Scots sound."
+  },
+  // --- The Bonny Birdy (Child 82) ---
+  {
+    text: "There was a knight, in a summer's night,\nWas riding o'er the lee,\nAnd there he saw a bonny birdy,\nWas singing upon a tree.",
+    source: "The Bonny Birdy (Child 82)",
+    time: ["night"],
+    season: ["summer"],
+    lyricsKey: "child82",
+    stanzaIndex: 0,
+    // notes: "Version A stanza 1. 'oer'→'o'er'. Opening line shared with Child 47 Version B (#45) — different ballads, accepted."
+  },
+  // --- Young Benjie (Child 86) ---
+  {
+    text: "And he was stout, and proud-hearted,\nAnd thought it bitterly,\nAnd he's gone by the wan moonlight\nTo meet his Marjorie.",
+    source: "Young Benjie (Child 86)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child86",
+    stanzaIndex: 3,
+    // notes: "Version A stanza 4. 'ot'→'it'; 'hes gaen'→'he's gone'."
+  },
+  // --- Child Maurice (Child 83) ---
+  {
+    text: "The one was killed in the morning air,\nHis mother died at eve,\nAnd ere the morning bells were rung,\nThe threesome were all gone.",
+    source: "Child Maurice (Child 83)",
+    time: ["morning", "evening"],
+    season: [],
+    lyricsKey: "child83",
+    stanzaIndex: 22,
+    // notes: "Version D stanza 30. 'mornin'→'morning' (twice); 'een'→'eve'; 'or'→'ere'; 'was rung'→'were rung'; 'a gane'→'all gone'."
+  },
+  // --- Lady Alice (Child 85) ---
+  {
+    text: "Lady Alice was sitting in her bower-window,\nMending her midnight coif,\nAnd there she saw as fine a corpse\nAs ever she saw in her life.",
+    source: "Lady Alice (Child 85)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child85",
+    stanzaIndex: 0,
+    // notes: "Version A stanza 1. 'quoif'→'coif'."
+  },
+  {
+    text: "O lay him down gently, ye six men tall,\nAll on the grass so green,\nAnd tomorrow, when the sun goes down,\nLady Alice a corpse shall be seen.",
+    source: "Lady Alice (Child 85)",
+    time: ["evening"],
+    season: [],
+    lyricsKey: "child85",
+    stanzaIndex: 2,
+    // notes: "Version A stanza 3. No modernisation needed."
+  },
+  // --- The Lass of Roch Royal (Child 76) ---
+  {
+    text: "When the cock had crawn, and day did dawn,\nAnd the sun began to peep,\nThen it rose him Love Gregor,\nAnd sorely did he weep.",
+    source: "The Lass of Roch Royal (Child 76)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child76",
+    stanzaIndex: 9,
+    // notes: "Version F. 'raise'→'rose'; 'sair, sair'→'sorely'. New stanza — distinct from existing #18 and #19 from same ballad."
+  },
+  // --- Old Robin of Portingale (Child 80) ---
+  {
+    text: "And about the middle time of the night\nCame twenty-four good knights in;\nSir Gyles he was the foremost man,\nSo well he knew that gin.",
+    source: "Old Robin of Portingale (Child 80)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child80",
+    stanzaIndex: 22,
+    // notes: "Stanza 23. Light spelling modernisation only. 'gin' = scheme/trap."
+  },
+  // --- Jellon Grame (Child 90) ---
+  {
+    text: "Win up, my bonny boy, he says,\nAs quick as ever you may;\nFor ye maun gang for Lillie Flower,\nBefore the break of day.",
+    source: "Jellon Grame (Child 90)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child90",
+    stanzaIndex: 1,
+    // notes: "Stanza 2. 'eer'→'ever'."
+  },
+  // --- The Gay Goshawk (Child 96) ---
+  {
+    text: "And well he knew that lady fair\nAmong her maidens free,\nFor the flower that springs in May morning\nWas not so sweet as she.",
+    source: "The Gay Goshawk (Child 96)",
+    time: ["morning"],
+    season: ["spring"],
+    lyricsKey: "child96",
+    stanzaIndex: 11,
+    // notes: "Version E stanza 12. 'kent'→'knew'; 'ladye feir'→'lady fair'."
+  },
+  // --- The Battle of Otterburn (Child 161) ---
+  {
+    text: "It fell about the Lammas tide,\nWhen the muir-men win their hay,\nThe doughty Douglas bound him to ride\nInto England, to drive a prey.",
+    source: "The Battle of Otterburn (Child 161)",
+    time: ["morning", "afternoon"],
+    season: ["autumn"],
+    lyricsKey: "child161",
+    stanzaIndex: 0,
+    // notes: "Version C stanza 1. Lammas = early August harvest festival. No modernisation needed."
+  },
+  {
+    text: "But up then spake a little page,\nBefore the peep of dawn:\nO waken ye, waken ye, my good lord,\nFor Percy's hard at hand.",
+    source: "The Battle of Otterburn (Child 161)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child161",
+    stanzaIndex: 13,
+    // notes: "Version C stanza 17. No modernisation needed."
+  },
+  {
+    text: "This deed was done at Otterburn,\nAbout the breaking of the day;\nEarl Douglas was buried at the bracken-bush,\nAnd Percy led captive away.",
+    source: "The Battle of Otterburn (Child 161)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child161",
+    stanzaIndex: 17,
+    // notes: "Version B stanza 14. No modernisation needed."
   },
   // --- Jamie Douglas (Child 204) ---
   {
@@ -731,7 +632,7 @@ const QUOTES = [
     season: [],
     lyricsKey: "child214",
     stanzaIndex: 0,
-    // notes: "Version F stanza 1. 'eenin'\u2192'evening'."
+    // notes: "Version F stanza 1. 'eenin'→'evening'."
   },
   // --- The Daemon Lover (Child 243) ---
   {
@@ -751,7 +652,7 @@ const QUOTES = [
     season: [],
     lyricsKey: "child248",
     stanzaIndex: 1,
-    // notes: "Version A stanza 2. 'gie'\u2192'give'. 'ere lang'=before long."
+    // notes: "Version A stanza 2. 'gie'→'give'. 'ere lang'=before long."
   },
   {
     text: "Flee, flee up, my bonny grey cock,\nAnd crow when it is day;\nYour neck shall be like the bonny beaten gold,\nAnd your wings of the silver grey.",
@@ -761,6 +662,105 @@ const QUOTES = [
     lyricsKey: "child248",
     stanzaIndex: 5,
     // notes: "Version A stanza 6. No modernisation needed."
+  },
+  // --- The Gypsy Laddie (Child 200) ---
+  {
+    text: "Yestreen I lay in a well-made bed,\nAnd my good lord beside me;\nThis night I'll lie in a tenant's barn,\nWhatever shall betide me.",
+    source: "The Gypsy Laddie (Child 200)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child200",
+    stanzaIndex: 3,
+    // notes: "Version A stanza 4. 'yestreen'=last night. No modernisation needed."
+  },
+  {
+    text: "Now when our lord came home at even,\nHe speired for his fair lady;\nThe ane she cried, the tither replied,\nShe's awa wi the gypsy laddie.",
+    source: "The Gypsy Laddie (Child 200)",
+    time: ["evening"],
+    season: [],
+    lyricsKey: "child200",
+    stanzaIndex: 7,
+    // notes: "Version F stanza 8. 'een'→'even'. 'speired'=asked."
+  },
+  // --- Brown Adam (Child 98) ---
+  {
+    text: "It was late, late in the evening,\nLate, late in the afternoon,\nThere came a knight to Brown Adam's house,\nAnd he was clad all in brown.",
+    source: "Brown Adam (Child 98)",
+    time: ["evening", "afternoon"],
+    season: [],
+    lyricsKey: "child98",
+    stanzaIndex: 0,
+    // notes: "Opening stanza. No modernisation needed."
+  },
+  // --- Johnie Scot (Child 99) ---
+  {
+    text: "O up then rose him Johnie Scot,\nAn hour before the day,\nAnd he is on to Fair Ellen's bower,\nTo hear what she did say.",
+    source: "Johnie Scot (Child 99)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child99",
+    stanzaIndex: 2,
+    // notes: "Version A. Pre-dawn rising stanza. No modernisation needed."
+  },
+  // --- Rose the Red and White Lily (Child 103) ---
+  {
+    text: "She hadna been in fair France\nA twelvemonth and a day,\nTill there she heard the morning drum\nBeat out at break of day.",
+    source: "Rose the Red and White Lily (Child 103)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child103",
+    stanzaIndex: 13,
+    // notes: "No modernisation needed."
+  },
+  // --- Sir Hugh, or, The Jew's Daughter (Child 155) ---
+  {
+    text: "She's taen him to her cellar dark,\nAt the hour o midnight keen;\nShe's stabbed him with a little penknife,\nAnd put him in the well sae deep.",
+    source: "Sir Hugh, or, The Jew's Daughter (Child 155)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "child155",
+    stanzaIndex: 7,
+    // notes: "Version B. 'o midnight keen' = of sharp/bitter midnight. No modernisation needed."
+  },
+  // --- The Famous Flower of Serving-Men (Child 106) ---
+  {
+    text: "She dressed herself in man's array,\nAnd to the king's court took her way,\nShe rode till she came to the palace gate,\nOne morning when it was late.",
+    source: "The Famous Flower of Serving-Men (Child 106)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child106",
+    stanzaIndex: 4,
+    // notes: "No modernisation needed."
+  },
+  // --- The Baffled Knight (Child 112) ---
+  {
+    text: "As I went out one May morning,\nTo view the fields and meadows gay,\nI met a maid came out of the wood,\nAnd she had lost her way.",
+    source: "The Baffled Knight (Child 112)",
+    time: ["morning"],
+    season: ["spring"],
+    lyricsKey: "child112",
+    stanzaIndex: 0,
+    // notes: "No modernisation needed."
+  },
+  // --- Robin Hood and the Monk (Child 119) ---
+  {
+    text: "John early in a May morning,\nLooking his shoes upon,\nHe took him to Nottingham,\nTo matins all alone.",
+    source: "Robin Hood and the Monk (Child 119)",
+    time: ["morning"],
+    season: ["spring"],
+    lyricsKey: "child119",
+    stanzaIndex: 8,
+    // notes: "Version A. 'morow'→'morning'. 'Much' (the miller's son) rendered as 'John' in this version."
+  },
+  // --- Durham Field (Child 159) ---
+  {
+    text: "The sixth of August the muster was,\nEarly in a morning clear;\nOur English archers their bows did bend,\nAnd many a black blade did appear.",
+    source: "Durham Field (Child 159)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "child159",
+    stanzaIndex: 0,
+    // notes: "'black blade' substituted for 'black bill' (a pole weapon with blackened blade) for readability. No other modernisation."
   },
   // --- Henry Martyn (Child 250) ---
   {
@@ -800,7 +800,7 @@ const QUOTES = [
     season: [],
     lyricsKey: "child265",
     stanzaIndex: 0,
-    // notes: "'deid'\u2192'dead'. No other modernisation."
+    // notes: "'deid'→'dead'. No other modernisation."
   },
   // --- The Suffolk Miracle (Child 272) ---
   {

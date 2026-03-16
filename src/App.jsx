@@ -965,8 +965,8 @@ export default function FolkClock() {
     }
 
     blockquote {
-      font-size: clamp(0.95rem, 3.5vw, 1.9rem);
-      line-height: 2;
+      font-size: clamp(1.15rem, 4.5vw, 1.9rem);
+      line-height: 1.85;
       font-style: normal;
       color: ${theme.ink};
       transition: color 1.2s ease;

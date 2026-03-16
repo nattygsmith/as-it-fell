@@ -748,12 +748,13 @@ const SEASON_LABELS = {
   winter: "Winter",
 };
 
-// Decorative glyphs per time of day
+// Decorative glyphs per time of day — plain Unicode, not emoji
+// The variation selector \uFE0E forces text rendering (no emoji colour)
 const TIME_GLYPHS = {
-  morning: "☀",
-  afternoon: "◑",
-  evening: "☽",
-  night: "✦",
+  morning: "☀\uFE0E",
+  afternoon: "◑\uFE0E",
+  evening: "☽\uFE0E",
+  night: "✦\uFE0E",
 };
 
 // ============================================================
@@ -767,6 +768,14 @@ export default function FolkClock() {
   const [fadeKey, setFadeKey] = useState(0);
   const [devTime, setDevTime] = useState(getTimeOfDay(new Date().getHours()));
   const [devSeason, setDevSeason] = useState(getSeason(new Date().getMonth()));
+
+  // Ensure viewport-fit=cover so iOS respects safe-area-inset env() vars
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="viewport"]');
+    if (meta && !meta.content.includes("viewport-fit")) {
+      meta.content += ", viewport-fit=cover";
+    }
+  }, []);
 
   const hour = now.getHours();
   const month = now.getMonth();
@@ -818,6 +827,12 @@ export default function FolkClock() {
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      height: 100%;
+      /* Extend background into safe-area gutters on iOS */
+      background: ${theme.bg};
+    }
+
     body {
       background: ${theme.bg};
       transition: background 1.2s ease;
@@ -825,9 +840,11 @@ export default function FolkClock() {
 
     .folk-root {
       min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
-      padding: 1.75rem 1.5rem;
+      /* Respect iOS safe-area insets in landscape */
+      padding: 1.75rem max(1.5rem, env(safe-area-inset-right)) 1.75rem max(1.5rem, env(safe-area-inset-left));
       font-family: 'IM Fell English', Georgia, serif;
       color: ${theme.ink};
       position: relative;
@@ -933,7 +950,7 @@ export default function FolkClock() {
       max-width: 720px;
       margin: 0 auto;
       overflow-y: auto;
-      padding: 0.5rem 0;
+      padding: 0.25rem 0;
     }
 
     @keyframes fadeUp {

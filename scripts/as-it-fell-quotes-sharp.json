@@ -1,7 +1,7 @@
 {
   "meta": {
     "description": "Quote library for As It Fell — time-tagged verses from Cecil Sharp's One Hundred English Folksongs (1916)",
-    "last_updated": "2026-03-16",
+    "last_updated": "2026-03-17",
     "status_values": [
       "approved",
       "pending-wordsmith",
@@ -154,6 +154,42 @@
       "lyricsKey": "sharp23",
       "stanzaIndex": 3,
       "notes": "Night tagged via firelight/candlelight imagery — domestic evening scene being renounced."
+    },
+    {
+      "id": 13,
+      "collection": "sharp",
+      "text": "They let him stand till midsummer day,\nTill he looked both pale and wan.\nAnd little Sir John he growed a long beard\nAnd so become a man.",
+      "source": "John Barleycorn (Sharp 84)",
+      "time": [],
+      "season": ["summer"],
+      "status": "approved",
+      "lyricsKey": "sharp84",
+      "stanzaIndex": 2,
+      "notes": "Third stanza. Shepherd Hayden's version collected Bampton, Oxfordshire, 1909. Midsummer day explicit."
+    },
+    {
+      "id": 14,
+      "collection": "sharp",
+      "text": "We know by the moon that we are not too soon,\nAnd we know by the sky that we are not too high.\nWe know by the stars that we are not too far,\nAnd we know by the ground that we are within sound.",
+      "source": "Wassail Song (Sharp 92)",
+      "time": ["night"],
+      "season": ["winter"],
+      "status": "approved",
+      "lyricsKey": "sharp92",
+      "stanzaIndex": 4,
+      "notes": "Fifth stanza. Night tagged via moon and stars. Winter via wassailing context."
+    },
+    {
+      "id": 15,
+      "collection": "sharp",
+      "text": "It's a rosebud in June, and violets in full bloom,\nAnd the small birds singing love songs on each spray.",
+      "source": "It's a Rosebud in June (Sharp 93)",
+      "time": [],
+      "season": ["summer"],
+      "status": "approved",
+      "lyricsKey": "sharp93",
+      "stanzaIndex": 0,
+      "notes": "Opening couplet. William King's version collected Mendip, Somerset, 1904. June explicit."
     }
   ]
 }

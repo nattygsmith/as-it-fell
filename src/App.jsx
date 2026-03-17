@@ -964,6 +964,36 @@ const QUOTES = [
     stanzaIndex: 3,
     // notes: "Night tagged via firelight/candlelight imagery — domestic evening scene being renounced."
   },
+  // --- John Barleycorn (Sharp 84) ---
+  {
+    text: "They let him stand till midsummer day,\nTill he looked both pale and wan.\nAnd little Sir John he growed a long beard\nAnd so become a man.",
+    source: "John Barleycorn (Sharp 84)",
+    time: [],
+    season: ["summer"],
+    lyricsKey: "sharp84",
+    stanzaIndex: 2,
+    // notes: "Third stanza. Shepherd Hayden's version collected Bampton, Oxfordshire, 1909. Midsummer day explicit."
+  },
+  // --- Wassail Song (Sharp 92) ---
+  {
+    text: "We know by the moon that we are not too soon,\nAnd we know by the sky that we are not too high.\nWe know by the stars that we are not too far,\nAnd we know by the ground that we are within sound.",
+    source: "Wassail Song (Sharp 92)",
+    time: ["night"],
+    season: ["winter"],
+    lyricsKey: "sharp92",
+    stanzaIndex: 4,
+    // notes: "Fifth stanza. Night tagged via moon and stars. Winter via wassailing context."
+  },
+  // --- It's a Rosebud in June (Sharp 93) ---
+  {
+    text: "It's a rosebud in June, and violets in full bloom,\nAnd the small birds singing love songs on each spray.",
+    source: "It's a Rosebud in June (Sharp 93)",
+    time: [],
+    season: ["summer"],
+    lyricsKey: "sharp93",
+    stanzaIndex: 0,
+    // notes: "Opening couplet. William King's version collected Mendip, Somerset, 1904. June explicit."
+  },
 ];
 
 // ============================================================

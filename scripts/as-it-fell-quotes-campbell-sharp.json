@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "description": "Quote library for As It Fell — time-tagged verses from Campbell & Sharp, English Folk Songs from the Southern Appalachians (G.P. Putnam's Sons, 1917)",
+    "last_updated": "2026-03-18",
+    "status_values": [
+      "approved",
+      "pending-wordsmith",
+      "hold"
+    ],
+    "notes": "Quotes marked pending-wordsmith are proposed but not yet finalised. Do not push to app until status is changed to approved. lyricsKey stubs need to be written and merged into as-it-fell-lyrics.json before deployment.",
+    "collection": "campbell-sharp"
+  },
+  "quotes": [
+    {
+      "id": 1,
+      "collection": "campbell-sharp",
+      "text": "Well, if I were a turtle dove, had wings and could fly,\nI would fly to my love's lodging and there I'd draw nigh.\nAnd in her lily white arms all night I would lay\nAnd watch those little winders till the dawning of day.",
+      "source": "Pretty Saro (Campbell/Sharp 1917, No. 76)",
+      "time": ["night", "morning"],
+      "season": [],
+      "status": "approved",
+      "lyricsKey": "campbellsharp76",
+      "stanzaIndex": 3,
+      "notes": "Fourth stanza (order varies by version). Night tagged via 'all night'; morning via 'dawning of day'. Text from the Appalachian tradition Sharp collected; multiple versions in the 1917 edition. lyricsKey stub needed."
+    },
+    {
+      "id": 2,
+      "collection": "campbell-sharp",
+      "text": "Come all you fair and tender ladies,\nTake warning how you court young men.\nThey're like a bright star on a summer's morning,\nFirst they appear and then they're gone.",
+      "source": "Come All You Fair and Tender Ladies (Campbell/Sharp 1917, No. 65)",
+      "time": ["morning"],
+      "season": ["summer"],
+      "status": "approved",
+      "lyricsKey": "campbellsharp65",
+      "stanzaIndex": 0,
+      "notes": "Opening stanza. Morning and summer both explicit. Sharp collected 18 versions; this stanza appears consistently across them. lyricsKey stub needed."
+    },
+    {
+      "id": 3,
+      "collection": "campbell-sharp",
+      "text": "It was early, early all in a spring,\nI went on board for to serve the king,\nI left my dearest dearie behind,\nThat often told me her heart was mine.",
+      "source": "Early, Early in the Spring (Campbell/Sharp 1917, No. 72)",
+      "time": ["morning"],
+      "season": ["spring"],
+      "status": "approved",
+      "lyricsKey": "campbellsharp72",
+      "stanzaIndex": 0,
+      "notes": "Opening stanza. Spring explicit; 'early, early' implies pre-dawn departure. Confirmed in 1917 edition. lyricsKey stub needed."
+    },
+    {
+      "id": 4,
+      "collection": "campbell-sharp",
+      "text": "Awake! Awake! You drowsy sleeper,\nAwake! Awake! For it's almost day,\nWhy do you lie there in your slumber,\nWhen your true-love is going away?",
+      "source": "Awake! Awake! (Campbell/Sharp 1917, No. 47)",
+      "time": ["morning"],
+      "season": [],
+      "status": "approved",
+      "lyricsKey": "campbellsharp47",
+      "stanzaIndex": 0,
+      "notes": "Opening stanza. 'Almost day' explicit morning marker. Collected from Mary Sands, Allanstand, Madison County NC, August 1916. Confirmed in 1917 edition. lyricsKey stub needed."
+    }
+  ]
+}

@@ -27,8 +27,9 @@ from pathlib import Path
 
 QUOTE_FILES = [
     "scripts/as-it-fell-quotes-child.json",
-    # Add future collection files here:
     "scripts/as-it-fell-quotes-sharp.json",
+    "scripts/as-it-fell-quotes-campbell-sharp.json",
+    # Add future collection files here:
     # "scripts/as-it-fell-quotes-lloyd.json",
 ]
 

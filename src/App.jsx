@@ -3276,7 +3276,7 @@ export default function FolkClock() {
     .lyrics-stanza {
       font-size: clamp(0.9rem, 3vw, 1.05rem);
       line-height: 1.9;
-      margin-bottom: 2.8rem;
+      margin-bottom: 1.6rem;
       color: ${theme.ink};
       opacity: 0.45;
       transition: opacity 0.3s;

@@ -23,6 +23,7 @@ LYRICS_FILES = [
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-child.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-campbell-sharp.json"),
+    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp-somerset.json"),
     # Add future collections here, e.g.:
     # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles.json"),
 ]

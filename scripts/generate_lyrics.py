@@ -1,37 +1,35 @@
 #!/usr/bin/env python3
 """
-generate_lyrics.py
-==================
-Merges all per-collection lyrics JSON files into the LYRICS constant
-in src/App.jsx.
+As It Fell — Lyrics Generator
+================================
+Merges all per-collection lyrics JSON files into src/lyrics.js.
 
-Reads from:
-  scripts/as-it-fell-lyrics-child.json
-  scripts/as-it-fell-lyrics-sharp.json
-  scripts/as-it-fell-lyrics-campbell-sharp.json
+Usage (run from repo root):
+    python3 scripts/generate_lyrics.py
 
-Run from the repo root:
-  python3 scripts/generate_lyrics.py
+To add a new collection, add its path to LYRICS_FILES below.
 """
 
 import json
 import os
+import sys
+from pathlib import Path
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 LYRICS_FILES = [
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-child.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-campbell-sharp.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp-somerset.json"),
-    # Add future collections here, e.g.:
+    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-campbell-sharp.json"),
+    # Add future collections here:
     # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles.json"),
+    # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lloyd.json"),
 ]
 
-TARGET_FILE = os.path.join(SCRIPTS_DIR, "..", "src", "App.jsx")
+TARGET_FILE = os.path.join(SCRIPTS_DIR, "..", "src", "lyrics.js")
 
-START_MARKER = "const LYRICS = {"
-END_MARKER = "\n};"
+# ── Helpers ──────────────────────────────────────────────────────────────────
 
 def escape_js_string(s):
     """Escape a string for use inside a JS double-quoted string."""
@@ -53,6 +51,8 @@ def entry_to_js(key, entry):
     lines.append(f'  }},')
     return "\n".join(lines)
 
+# ── Main ─────────────────────────────────────────────────────────────────────
+
 def main():
     merged = {}
     for path in LYRICS_FILES:
@@ -67,42 +67,26 @@ def main():
         merged.update(data)
         print(f"  Loaded {len(data)} entries from {os.path.basename(path)}")
 
+    if not merged:
+        print("No lyrics entries found. Aborting.", file=sys.stderr)
+        sys.exit(1)
+
     print(f"  Total LYRICS entries: {len(merged)}")
 
     entry_strings = [entry_to_js(k, v) for k, v in merged.items()]
-    new_block = "const LYRICS = {\n" + "\n\n".join(entry_strings) + "\n};"
+    output = (
+        "// AUTO-GENERATED — do not edit by hand.\n"
+        "// To update, edit the per-collection JSON files in scripts/ and run:\n"
+        "//   python3 scripts/generate_lyrics.py\n"
+        "\n"
+        "export const LYRICS = {\n"
+        + "\n\n".join(entry_strings)
+        + "\n};\n"
+    )
 
-    with open(TARGET_FILE, encoding="utf-8") as f:
-        source = f.read()
-
-    start = source.find(START_MARKER)
-    if start == -1:
-        print("ERROR: Could not find 'const LYRICS = {' in target file.")
-        return
-
-    # Find the matching closing "};" by scanning forward from start
-    depth = 0
-    i = start + len(START_MARKER)
-    # Account for the opening brace already in START_MARKER
-    depth = 1
-    while i < len(source) and depth > 0:
-        if source[i] == "{":
-            depth += 1
-        elif source[i] == "}":
-            depth -= 1
-        i += 1
-    # i now points just past the closing }
-    # skip the ; after it
-    if i < len(source) and source[i] == ";":
-        i += 1
-
-    end = i
-    updated = source[:start] + new_block + source[end:]
-
-    with open(TARGET_FILE, "w", encoding="utf-8") as f:
-        f.write(updated)
-
-    print(f"  Updated LYRICS block in {os.path.basename(TARGET_FILE)}")
+    target = Path(TARGET_FILE)
+    target.write_text(output, encoding="utf-8")
+    print(f"  Updated LYRICS in {target.name}")
 
 if __name__ == "__main__":
     main()

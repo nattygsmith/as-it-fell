@@ -2,24 +2,18 @@
 """
 As It Fell — Quote Generator
 =============================
-Reads as-it-fell-quotes-child.json (and future collection files) and
-regenerates the QUOTES array in folk-quotes.jsx.
+Reads all per-collection quote JSON files and regenerates src/quotes.js.
 
-Usage:
-    python3 generate_quotes.py
+Usage (run from repo root):
+    python3 scripts/generate_quotes.py
 
-Expects to be run from the repo root, with:
-    - scripts/as-it-fell-quotes-child.json  (quote library)
-    - src/App.jsx                            (target file)
+Only quotes with status "approved" are included.
+Quotes with status "hold", "pending-wordsmith", or "retired" are skipped.
 
-The script replaces the content between the markers:
-    const QUOTES = [
-    ];
-leaving all other app code untouched.
+To add a new collection, add its path to QUOTE_FILES below.
 """
 
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -28,17 +22,14 @@ from pathlib import Path
 QUOTE_FILES = [
     "scripts/as-it-fell-quotes-child.json",
     "scripts/as-it-fell-quotes-sharp.json",
-    "scripts/as-it-fell-quotes-campbell-sharp.json",
     "scripts/as-it-fell-quotes-sharp-somerset.json",
+    "scripts/as-it-fell-quotes-campbell-sharp.json",
     # Add future collection files here:
     # "scripts/as-it-fell-quotes-lloyd.json",
+    # "scripts/as-it-fell-quotes-karpeles.json",
 ]
 
-APP_FILE = "src/App.jsx"
-
-# Markers in App.jsx that delimit the QUOTES array
-START_MARKER = "const QUOTES = ["
-END_MARKER = "];"
+TARGET_FILE = "src/quotes.js"
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -76,12 +67,11 @@ def render_quote(q):
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
-    # Load all quotes from all collection files
     all_quotes = []
     for path in QUOTE_FILES:
         p = Path(path)
         if not p.exists():
-            print(f"Warning: {path} not found, skipping.", file=sys.stderr)
+            print(f"  Warning: {path} not found, skipping.", file=sys.stderr)
             continue
         with open(p, encoding="utf-8") as f:
             data = json.load(f)
@@ -94,17 +84,15 @@ def main():
         print("No approved quotes found. Aborting.", file=sys.stderr)
         sys.exit(1)
 
-    # Group by collection for source comments
+    # Group by collection for readability in the generated file
     by_collection = {}
     for q in all_quotes:
         coll = q.get("collection", "unknown")
         by_collection.setdefault(coll, []).append(q)
 
-    # Build the new QUOTES array content
     blocks = []
     for coll, quotes in by_collection.items():
         blocks.append(f"  // ── {coll} ({'─' * (50 - len(coll))})")
-        # Group further by source ballad
         current_source = None
         for q in quotes:
             if q["source"] != current_source:
@@ -112,32 +100,19 @@ def main():
                 current_source = q["source"]
             blocks.append(render_quote(q))
 
-    new_array_body = "\n".join(blocks)
-    new_quotes_block = f"const QUOTES = [\n{new_array_body}\n];"
-
-    # Read App.jsx
-    app_path = Path(APP_FILE)
-    if not app_path.exists():
-        print(f"Error: {APP_FILE} not found.", file=sys.stderr)
-        sys.exit(1)
-
-    app_content = app_path.read_text(encoding="utf-8")
-
-    # Find and replace the QUOTES block
-    # Match from START_MARKER to the first ]; after it
-    pattern = re.compile(
-        r"(const QUOTES = \[).*?(\];)",
-        re.DOTALL
+    array_body = "\n".join(blocks)
+    output = (
+        "// AUTO-GENERATED — do not edit by hand.\n"
+        "// To update, edit the per-collection JSON files in scripts/ and run:\n"
+        "//   python3 scripts/generate_quotes.py\n"
+        "\n"
+        f"export const QUOTES = [\n{array_body}\n];\n"
     )
-    match = pattern.search(app_content)
-    if not match:
-        print(f"Error: Could not find QUOTES array in {APP_FILE}.", file=sys.stderr)
-        sys.exit(1)
 
-    new_content = app_content[:match.start()] + new_quotes_block + app_content[match.end():]
-    app_path.write_text(new_content, encoding="utf-8")
+    target = Path(TARGET_FILE)
+    target.write_text(output, encoding="utf-8")
 
-    print(f"\nDone. {len(all_quotes)} approved quotes written to {APP_FILE}.")
+    print(f"\nDone. {len(all_quotes)} approved quotes written to {TARGET_FILE}.")
 
 if __name__ == "__main__":
     main()

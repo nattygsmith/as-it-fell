@@ -52,6 +52,13 @@ export default function AboutOverlay({ onClose }) {
             <li>
               <strong>Folk-Songs from Hampshire</strong>—16 traditional English folk songs collected by George B. Gardiner from singers across Hampshire between 1905 and 1908, and published in 1909 with piano accompaniments by Gustav Holst. Gardiner collected hundreds of songs during this period; these sixteen were selected and edited by Cecil Sharp for publication as part of his Folk-Songs of England series.
             </li>
+            <li>
+              <strong>Cowboy Songs and Other Frontier Ballads</strong>—traditional American
+              cowboy songs and frontier ballads collected by John A. Lomax from singers and
+              ranch communities across the western United States and published in 1910. The
+              songs are traditional and anonymous unless otherwise noted; where a known author
+              exists, they are credited individually.
+            </li>
           </ul>
           <p>
             Each verse is chosen to match the time of day and season where you are.

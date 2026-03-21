@@ -23,6 +23,7 @@ LYRICS_FILES = [
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp-somerset.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-campbell-sharp.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles-newfoundland.json"),
+    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-gardiner-hampshire.json"),
     # Add future collections here:
     # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles.json"),
     # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lloyd.json"),
@@ -37,6 +38,8 @@ def escape_js_string(s):
     return s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n")
 
 def entry_to_js(key, entry):
+    if "stanzas" not in entry:
+        return None
     lines = []
     lines.append(f'  "{key}": {{')
     lines.append(f'    title: "{escape_js_string(entry["title"])}",')
@@ -74,7 +77,7 @@ def main():
 
     print(f"  Total LYRICS entries: {len(merged)}")
 
-    entry_strings = [entry_to_js(k, v) for k, v in merged.items()]
+    entry_strings = [s for s in (entry_to_js(k, v) for k, v in merged.items()) if s is not None]
     output = (
         "// AUTO-GENERATED — do not edit by hand.\n"
         "// To update, edit the per-collection JSON files in scripts/ and run:\n"

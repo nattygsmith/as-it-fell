@@ -49,6 +49,9 @@ export default function AboutOverlay({ onClose }) {
             <li>
               <strong>Folk Songs from Newfoundland</strong>—30 traditional folk songs collected by Maud Karpeles in Newfoundland in 1929–30 during two six-week visits. Karpeles collected most of the songs from fishermen and their families in the “outports” of St. Johns. She collected 200 songs (including variants), from which this collection was established. It was published in 1934 with piano accompaniments by Vaughan Williams and his associates.
             </li>
+            <li>
+              <strong>Folk-Songs from Hampshire</strong>—16 traditional English folk songs collected by George B. Gardiner from singers across Hampshire between 1905 and 1908, and published in 1909 with piano accompaniments by Gustav Holst. Gardiner collected hundreds of songs during this period; these sixteen were selected and edited by Cecil Sharp for publication as part of his Folk-Songs of England series.
+            </li>
           </ul>
           <p>
             Each verse is chosen to match the time of day and season where you are.

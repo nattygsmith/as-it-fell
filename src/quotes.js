@@ -1316,4 +1316,44 @@ export const QUOTES = [
     stanzaIndex: 0,
     // notes: "Opening stanza. 'Early, early' implies pre-dawn departure; spring explicit. Note: this is the broadside song 'Sweet William' (not the ballad Sweet William's Ghost). Sung by Mrs Bride Curran at Conception Harbour. Confirmed from 1934 OUP edition Vol. I p. 59. See also Appalachians No. 106."
   },
+  // ── gardiner-hampshire (────────────────────────────────)
+  // --- The New-Mown Hay (Gardiner, Folk-Songs from Hampshire, 1909) ---
+  {
+    text: "As I walked forth one summer's morn\nHard by a river side,\nWhere yellow cowslips did adorn\nThe blushing field with pride,\nI spied a damsel on the grass,\nMore blooming than the may;\nHer looks the Queen of Love surpassed,\nAmong the new-mown hay.",
+    source: "The New-Mown Hay (Gardiner, Folk-Songs from Hampshire, 1909)",
+    time: ["morning"],
+    season: ["summer"],
+    lyricsKey: "gardinerNewMownHay",
+    stanzaIndex: 0,
+    // notes: "Opening stanza. Collected by George B. Gardiner; pianoforte accompaniment by Gustav von Holst."
+  },
+  // --- The Happy Stranger (Gardiner, Folk-Songs from Hampshire, 1909) ---
+  {
+    text: "As I was a-walking one morning in spring\nTo hear the small birds whistle and the nightingales sing,\nI heard a fair maid making sorrowful moan,\nSaying, \"I am a stranger and far from my home.\"",
+    source: "The Happy Stranger (Gardiner, Folk-Songs from Hampshire, 1909)",
+    time: ["morning"],
+    season: ["spring"],
+    lyricsKey: "gardinerHappyStranger",
+    stanzaIndex: 0,
+    // notes: "Opening stanza. Collected by George B. Gardiner; pianoforte accompaniment by Gustav von Holst."
+  },
+  // --- The Squire and the Thresher (Gardiner, Folk-Songs from Hampshire, 1909) ---
+  {
+    text: "One morning this squire all on the highway\nHe met the poor thresherman and unto him did say,\n\"You have many children and that I well do know,\nHow can you maintain them as well as you do?\"",
+    source: "The Squire and the Thresher (Gardiner, Folk-Songs from Hampshire, 1909)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "gardinerSquireThresher",
+    stanzaIndex: 1,
+    // notes: "Verse 2. Collected by George B. Gardiner; pianoforte accompaniment by Gustav von Holst."
+  },
+  {
+    text: "And when I come home from my labour at night\nTo my wife and my family in whom I take delight,\nWhen my children come around me with their prittle-prattling noise,\nNow these are the riches a poor man enjoys.",
+    source: "The Squire and the Thresher (Gardiner, Folk-Songs from Hampshire, 1909)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "gardinerSquireThresher",
+    stanzaIndex: 4,
+    // notes: "Verse 5. Collected by George B. Gardiner; pianoforte accompaniment by Gustav von Holst."
+  },
 ];

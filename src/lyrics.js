@@ -1763,4 +1763,173 @@ export const LYRICS = {
       "\"Well done, my good fellow, thou art kind to thy wife,\nI will make thee contented all the days of thy life,\nHere's forty acre of good land I freely give to thee\nAll for to maintain thy sweet family.\"",
     ],
   },
+
+  "lomaxCowboysDream": {
+    title: "The Cowboy's Dream",
+    version: "John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "Last night as I lay on the prairie,\nAnd looked at the stars in the sky,\nI wondered if ever a cowboy\nWould drift to that sweet by and by.",
+      "Roll on, roll on;\nRoll on, little dogies, roll on, roll on,\nRoll on, roll on;\nRoll on, little dogies, roll on.",
+      "The road to that bright, happy region\nIs a dim, narrow trail, so they say;\nBut the broad one that leads to perdition\nIs posted and blazed all the way.",
+      "They say there will be a great round-up,\nAnd cowboys, like dogies, will stand,\nTo be marked by the Riders of Judgment\nWho are posted and know every brand.",
+      "I know there's many a stray cowboy\nWho'll be lost at the great, final sale,\nWhen he might have gone in the green pastures\nHad he known of the dim, narrow trail.",
+      "I wonder if ever a cowboy\nStood ready for that Judgment Day,\nAnd could say to the Boss of the Riders,\n'I'm ready, come drive me away.'",
+      "For they, like the cows that are locoed,\nStampede at the sight of a hand,\nAre dragged with a rope to the round-up,\nOr get marked with some crooked man's brand.",
+      "And I'm scared that I'll be a stray yearling,—\nA maverick, unbranded on high,—\nAnd get cut in the bunch with the 'rusties'\nWhen the Boss of the Riders goes by.",
+      "For they tell of another big owner\nWhose ne'er overstocked, so they say,\nBut who always makes room for the sinner\nWho drifts from the straight, narrow way.",
+      "They say he will never forget you,\nThat he knows every action and look;\nSo, for safety, you'd better get branded,\nHave your name in the great Tally Book.",
+    ],
+  },
+
+  "lomaxWhoopee": {
+    title: "Whoopee-Ti-Yi-Yo, Git Along Little Dogies",
+    version: "John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "As I was a-walking one morning for pleasure,\nI spied a cow-puncher a-riding alone;\nHis hat was throwed back and his spurs was a-jingling,\nAs he approached me a-singing this song.",
+      "Whoopee ti-yi-yo, git along, little dogies,\nIt's your misfortune and none of my own;\nWhoopee ti-yi-yo, git along, little dogies,\nFor you know Wyoming will be your new home.",
+      "It's early in the spring that we round up the dogies,\nWe mark them and brand them and bob off their tails;\nWe round up our horses, load up the chuck wagon,\nAnd then throw the dogies out onto the trail.",
+      "It's whooping and yelling and driving the dogies,\nAnd oh, how I wish you would only go on;\nIt's whooping and punching, go on, little dogies,\nYou know that Wyoming will be your new home.",
+      "Your mother she was raised way down in Texas,\nWhere the jimson weed and sand-burrs grow;\nWe'll fill you up on prickly pear and cholla,\nTill you're ready for the trail to Idaho.",
+      "Some fellows go up the trail for pleasure,\nBut that's where they've got it most awfully wrong;\nFor you haven't an idea the trouble they give us,\nAs we go a-driving them dogies along.",
+    ],
+  },
+
+  "lomaxHomeOnTheRange": {
+    title: "Home on the Range",
+    version: "Words by Brewster Higley (1873); collected by John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "Oh, give me a home where the buffalo roam,\nWhere the deer and the antelope play,\nWhere seldom is heard a discouraging word\nAnd the skies are not cloudy all day.",
+      "Home, home on the range,\nWhere the deer and the antelope play;\nWhere seldom is heard a discouraging word\nAnd the skies are not cloudy all day.",
+      "Where the air is so pure, the zephyrs so free,\nThe breezes so balmy and light,\nThat I would not exchange my home on the range\nFor all of the cities so bright.",
+      "How often at night when the heavens are bright\nWith the light from the glittering stars,\nHave I stood here amazed and asked as I gazed\nIf their glory exceeds that of ours.",
+      "Oh, I love these wild flowers in this dear land of ours,\nThe curlew I love to hear scream,\nAnd I love the white rocks and the antelope flocks\nThat graze on the mountain-tops green.",
+      "Oh, give me a land where the bright diamond sand\nFlows leisurely down the stream;\nWhere the graceful white swan goes gliding along\nLike a maid in a heavenly dream.",
+      "Then I would not exchange my home on the range,\nWhere the deer and the antelope play;\nWhere seldom is heard a discouraging word\nAnd the skies are not cloudy all day.",
+    ],
+  },
+
+  "lomaxNightHerding": {
+    title: "Night-Herding Song",
+    version: "Written by Harry Stephens; collected by John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "Oh, slow up, dogies, quit your roving around,\nYou have wandered and trampled all over the ground;\nOh, graze along, dogies, and feed kinda slow,\nAnd don't forever be on the go.\nMove slow, little dogies, move slow.",
+      "I have circle-herded, trail-herded, and cross-herded too,\nBut to keep you together is what I can't do;\nMy horse is leg-weary and I'm awful tired,\nBut if I let you get away I'm sure to get fired.\nBunch up, little dogies, bunch up.",
+      "Oh say, little dogies, when you goin' to lay down\nAnd quit this forever sifting around?\nMy limbs are weary, my seat is sore;\nOh, lay down, dogies, like you've laid before.\nLay down, little dogies, lay down.",
+      "Oh, lay still, dogies, since you have laid down,\nStretch away out on the big open ground;\nSnore loud, little dogies, and drown the wild sound\nThat will all go away when the day rolls round.\nLay still, little dogies, lay still.",
+    ],
+  },
+
+  "lomaxDyingCowboy": {
+    title: "The Dying Cowboy",
+    version: "John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "\"O bury me not on the lone prairie,\"\nThese words came low and mournfully\nFrom the pallid lips of a youth who lay\nOn his dying bed at the close of day.",
+      "He had wailed in pain till o'er his brow\nDeath's shadows fast were gathering now;\nHe thought of his home and his loved ones nigh\nAs the cowboys gathered to see him die.",
+      "\"O bury me not on the lone prairie\nWhere the wild cayotes will howl o'er me,\nIn a narrow grave just six by three,\nO bury me not on the lone prairie.",
+      "\"In fancy I listen to the well known words\nOf the free, wild winds and the song of the birds;\nI think of home and the cottage in the bower\nAnd the scenes I loved in my childhood's hour.",
+      "\"It matters not, I've oft been told,\nWhere the body lies when the heart grows cold;\nYet grant, Oh grant this wish to me,\nO bury me not on the lone prairie.",
+      "\"I've always wished to be laid when I died\nIn the little churchyard on the green hillside;\nBy my father's grave, there let mine be,\nAnd bury me not on the lone prairie.",
+      "\"Let my death slumber be where my mother's prayer\nAnd a sister's tear will mingle there,\nWhere my friends can come and weep o'er me;\nO bury me not on the lone prairie.\"",
+      "\"O bury me not,\" and his voice failed there,\nBut we took no heed of his dying prayer;\nIn a narrow grave just six by three\nWe buried him there on the lone prairie.",
+      "Where the dew-drops glow and the butterflies rest,\nAnd the flowers bloom o'er the prairie's crest;\nWhere the wild cayote and winds sport free\nOn a wet saddle blanket lay a cowboy-ee.",
+      "O we buried him there on the lone prairie\nWhere the wild rose blooms and the wind blows free,\nO his pale young face nevermore to see,—\nFor we buried him there on the lone prairie.",
+      "Yes, we buried him there on the lone prairie\nWhere the owl all night hoots mournfully,\nAnd the blizzard beats and the winds blow free\nO'er his lowly grave on the lone prairie.",
+      "And the cowboys now as they roam the plain,—\nFor they marked the spot where his bones were lain,—\nFling a handful of roses o'er his grave,\nWith a prayer to Him who his soul will save.",
+    ],
+  },
+
+  "lomaxKansasLine": {
+    title: "The Kansas Line",
+    version: "John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "Come all you jolly cowmen, don't you want to go\nWay up on the Kansas line?\nWhere you whoop up the cattle from morning till night\nAll out in the midnight rain.",
+      "The cowboy's life is a dreadful life,\nHe's driven through heat and cold;\nI'm almost froze with the water on my clothes,\nA-ridin' through heat and cold.",
+      "I've been where the lightnin', the lightnin' tangled in my eyes,\nThe cattle I could scarcely hold;\nThink I heard my boss man say:\n'I want all brave-hearted men who ain't afraid to die\nTo whoop up the cattle from morning till night,\nWay up on the Kansas line.'",
+      "Speaking of your farms and your shanty charms,\nSpeaking of your silver and gold,—\nTake a cowman's advice, go and marry you a true and lovely little wife,\nNever to roam, always stay at home;\nThat's a cowman's, a cowman's advice,\nWay up on the Kansas line.",
+      "Think I heard the noisy cook say,\n\"Wake up, boys, it's near the break of day\" —\nWay up on the Kansas line,\nAnd slowly we will rise with the sleepy feeling eyes,\nWay up on the Kansas line.",
+      "The cowboy's life is a dreary, dreary life,\nAll out in the midnight rain;\nI'm almost froze with the water on my clothes,\nWay up on the Kansas line.",
+    ],
+  },
+
+  "lomaxRailroadCorral": {
+    title: "The Railroad Corral",
+    version: "Written by Joseph Mills Hanson (1904); collected by John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "Oh, we're up in the morning ere breaking of day,\nThe chuck-wagon's busy, the flapjacks in play;\nThe herd is astir o'er hillside and vale,\nWith the night riders rounding them into the trail.",
+      "Oh, come take up your cinches, come shake out your reins;\nCome wake your old bronco and break for the plains;\nCome roust out your steers from the long chaparral,\nFor the outfit is off to the railroad corral.",
+      "The sun circles upward; the steers as they plod\nAre pounding to powder the hot prairie sod;\nAnd it seems as the dust makes you dizzy and sick\nThat we'll never reach noon and the cool, shady creek.",
+      "But tie up your kerchief and ply up your nag;\nCome dry up your grumbles and try not to lag;\nCome with your steers from the long chaparral,\nFor we're far on the road to the railroad corral.",
+      "But the longest of days must reach evening at last,\nThe hills all climbed, the creeks all past;\nThe tired herd droops in the yellowing light;\nLet them loaf if they will, for the railroad's in sight.",
+      "So flap up your holster and snap up your belt,\nAnd strap up your saddle whose lap you have felt;\nGood-bye to the steers from the long chaparral,\nFor there's a town that's a trunk by the railroad corral.",
+    ],
+  },
+
+  "lomaxLittleJoe": {
+    title: "Little Joe the Wrangler",
+    version: "Written by N. Howard Thorp (1898); collected by John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "It's little Joe the wrangler, he'll wrangle nevermore;\nHis days with the remuda they are o'er.\n'Twas a year ago last April he rode into our herd,\nJust a little Texas stray and all alone.",
+      "It was late in the evening when he rode into our camp,\nOn a little Texas pony he called Chaw;\nWith his brogan shoes and overalls, a tougher looking chap\nYou never in your life before had saw.",
+      "He said he'd had to leave his home, his ma had married twice;\nHis new pa whipped him every day or two;\nSo he saddled up old Chaw one night and quietly rode away,\nAnd now he's trying to paddle his own canoe.",
+      "He said if we would give him work, he'd do the best he could,\nThough he didn't know a thing about a cow;\nSo the boss he cut him out a mount and kindly helped him on,\n'Cause he sorta liked that little stray somehow.",
+      "We travelled up the Pecos, the weather being fine;\nWe camped down by the south side of the bend;\nWhen a norther commenced blowing and we doubled up our guard,\nFor it took all hands to hold the cattle in.",
+      "Little Joe the wrangler was called out with the rest,\nThough the kid had scarcely reached the herd,\nWhen the cattle they stampeded, like a hailstorm long they fled,\nThen we were all a-riding for the lead.",
+      "'Midst the streaks of lightning a horse we could see in the lead,\n'Twas little Joe the wrangler in the lead;\nHe was riding Old Blue Rocket with a slicker o'er his head,\nA-trying to check the cattle in their speed.",
+      "At last we got them milling and kindly settled down,\nAnd the extra guard back to the camp did go;\nBut one of them was missing, and we knew it at a glance,\n'Twas our little Texas stray, poor wrangler Joe.",
+      "Next morning, just at daybreak, we found where Rocket fell\nDown in the washout twenty feet below;\nBeneath the horse's body, a-lying where he fell,\nWas our little Texas stray, poor wrangler Joe.",
+    ],
+  },
+
+  "lomaxChisholmTrail": {
+    title: "The Old Chisholm Trail",
+    version: "John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "Come along, boys, and listen to my tale,\nI'll tell you of my troubles on the old Chisholm trail.\nComa ti yi youpy, youpy ya, youpy ya,\nComa ti yi youpy, youpy ya.",
+      "I started up the trail October twenty-third,\nI started up the trail with the 2-U herd.",
+      "Oh, a ten-dollar hoss and a forty-dollar saddle,\nAnd I'm goin' to punchin' Texas cattle.",
+      "I'm up in the mornin' afore daylight,\nAnd afore I sleep the moon shines bright.",
+      "Old Ben Bolt was a blamed good boss,\nBut he'd go to see the girls on a sore-backed hoss.",
+      "My hoss throwed me off at the creek called Mud,\nMy hoss throwed me off round the 2-U herd.",
+      "Last time I saw him he was going cross the level\nA-kicking up his heels and a-running like the devil.",
+      "It's cloudy in the west, a-looking like rain,\nAnd my durned old slicker's in the wagon again.",
+      "No chaps, no slicker, and it's pouring down rain,\nAnd I swear, by god, I'll never night-herd again.",
+      "With my blanket and my gun and my rawhide rope,\nI'm a-sliding down the trail in a long, slow lope.",
+      "It's bacon and beans most every day,\nI'd as soon be a-eating prairie hay.",
+      "I went to the boss to draw my roll,\nHe had it figured out I was nine dollars in the hole.",
+      "Coma ti yi youpy, youpy ya, youpy ya,\nComa ti yi youpy, youpy ya.",
+    ],
+  },
+
+  "lomaxWorkDoneThisFall": {
+    title: "When the Work is Done This Fall",
+    version: "Written by D.J. O'Malley (1893); collected by John A. Lomax, Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910)",
+    stanzas: [
+      "A group of jolly cowboys, discussing plans at ease,\nSays one, \"I'll tell you something, boys, if you will listen, please.\nI am an old cow-puncher and here I'm dressed in rags,\nAnd I used to be a tough one and take on great big jags.",
+      "\"But I've got a home, boys, a good one, you all know,\nAlthough I have not seen it since long, long ago.\nI'm going back to Dixie once more to see them all;\nYes, I'm going to see my mother when the work's all done this fall.",
+      "\"After the round-ups are over and after the shipping is done,\nI am going right straight home, boys, ere all my money is gone.\nI have changed my ways, boys, no more will I fall;\nAnd I am going home, boys, when work is done this fall.",
+      "\"When I left home, boys, my mother for me cried,\nBegged me not to go, boys, for me she would have died;\nMy mother's heart is breaking, breaking for me, that's all,\nAnd with God's help I'll see her when the work's all done this fall.\"",
+      "That very night this cowboy went out to stand his guard;\nThe night was dark and cloudy and storming very hard;\nThe cattle they got frightened and rushed in wild stampede,\nThe cowboy tried to head them while riding at full speed.",
+      "Riding in the darkness, so loudly did he shout,\nTrying hard to head them and turn the herd about;\nHis saddle horse did stumble and on him did fall,\nThe poor boy won't see his mother when the work's all done this fall.",
+      "His body was so mangled the boys all thought him dead;\nThey picked him up so gently and laid him on a bed;\nHe opened wide his blue eyes and looking all around,\nHe motioned to his comrades to sit near him on the ground.",
+      "Poor Charlie was buried at sunrise, no tombstone at his head,\nNothing but a little board; and this is what it said:\n\"Charlie died at daybreak, he died from a fall,\nAnd he'll not see his mother when the work's all done this fall.\"",
+    ],
+  },
+
+  "lomax1934GerrysRocks": {
+    title: "Gerry's Rocks",
+    collectionLabel: "American Ballads and Folk Songs (Lomax 1934)",
+    version: "John A. Lomax and Alan Lomax, American Ballads and Folk Songs (Macmillan, 1934)",
+    stanzas: [
+      "Come all you jolly fellows, wherever you may be,\nI hope you'll pay attention and listen unto me.\nIt's all about some shanty-boys, so manly and so brave,\n'Twas on a jam on Gerry's rock they met their watery grave.",
+      "'Twas on one Sunday morning, as you shall quickly hear,\nOur logs were piled up mountain-high, we could not keep them clear;\n\"Turn out, brave boys,\" the foreman cried, with a voice devoid of fear,\n\"And we'll break up the jam on Gerry's rock and for Eagletown we'll steer.\"",
+      "Some of the shanty-boys were willing, while others they hung back,\nFor to work on Sunday, they thought it was not right.\nBut six American shanty-boys did volunteer to go\nTo break the jam on Gerry's rock with their foreman, young Monroe.",
+      "They had not rolled off many logs before the boss to them did say,\n\"I would you all to be on your guard, for the jam will soon give way.\"\nHe had no more than spoke those words before the jam did break and go,\nAnd carried away those six brave youths with their foreman, young Monroe.",
+      "As soon as the news got into camp and attorneys came to hear,\nIn search of their mangled bodies the river we did steer,\nAnd one of their dead bodies found, to our great grief and woe,\nAll bruised and mangled on the beach lay the corpse of young Monroe.",
+      "We took him from the water, smoothed back his raven-black hair,\nThere was one fair form amongst them whose cries did rend the air,\nThere was one fair form amongst them, a girl from Saginaw town,\nWhose mournful cries did rend the skies for her lover that was drowned.",
+      "We buried him quite decently. 'Twas on the twelfth of May,\nCome all you jolly shanty-boys, and for your comrade pray.\nWe engraved upon a hemlock tree that near his grave did grow—\nThe name, the age, the drowning date of the foreman, young Monroe.",
+      "His mother was a widow living down by the river side.\nMiss Clark she was a noble girl, this young man's promised bride.\nThe wages of true love the firm to her did pay,\nAnd liberal subscription she received from the shanty-boys that day.",
+      "She received their presents kindly and thanked them every one,\nThough she did not survive him long, as you shall understand;\nScarcely three weeks after, and she was called to go,\nAnd her last request was to be laid by her lover, young Monroe.",
+      "Come all you brave shanty-boys, I'd have you call and see\nTwo green graves by the river side where grows the hemlock tree;\nThe shanty-boys cut off the wood where lay those lovers low—\n'Tis the handsome Clara Clark and her true love, brave Monroe.",
+    ],
+  },
 };

@@ -59,6 +59,9 @@ export default function AboutOverlay({ onClose }) {
               songs are traditional and anonymous unless otherwise noted; where a known author
               exists, they are credited individually.
             </li>
+            <li>
+              <strong>American Ballads and Folk Songs</strong>—over 200 traditional songs and ballads collected by John A. Lomax and his son Alan Lomax from across the United States and published in 1934. The collection ranges widely: lumberjack and canal songs from the Great Lakes, frontier ballads, Appalachian mountain songs, sea shanties, and work songs recorded in Southern prisons and levee camps. The prison and work songs in particular preserve music from African American communities under conditions of forced labor — a tradition distinct from the British-derived folk song that shapes most of this collection. Songs are traditional and anonymous unless otherwise noted.
+            </li>
           </ul>
           <p>
             Each verse is chosen to match the time of day and season where you are.

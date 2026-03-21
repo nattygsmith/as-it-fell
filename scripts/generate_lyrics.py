@@ -24,6 +24,8 @@ LYRICS_FILES = [
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-campbell-sharp.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles-newfoundland.json"),
     os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-gardiner-hampshire.json"),
+    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lomax.json"),
+    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lomax1934.json"),
     # Add future collections here:
     # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles.json"),
     # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lloyd.json"),

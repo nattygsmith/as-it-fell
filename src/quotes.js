@@ -1356,4 +1356,134 @@ export const QUOTES = [
     stanzaIndex: 4,
     // notes: "Verse 5. Collected by George B. Gardiner; pianoforte accompaniment by Gustav von Holst."
   },
+  // ── lomax (─────────────────────────────────────────────)
+  // --- The Cowboy's Dream (Lomax 1910) ---
+  {
+    text: "Last night as I lay on the prairie,\nAnd looked at the stars in the sky,\nI wondered if ever a cowboy\nWould drift to that sweet by and by.",
+    source: "The Cowboy's Dream (Lomax 1910)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "lomaxCowboysDream",
+    stanzaIndex: 0,
+    // notes: "Opening stanza. Traditional/anonymous. Night explicit. Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 18."
+  },
+  // --- Whoopee-Ti-Yi-Yo, Git Along Little Dogies (Lomax 1910) ---
+  {
+    text: "As I was a-walking one morning for pleasure,\nI spied a cow-puncher a-riding alone;\nHis hat was throwed back and his spurs was a-jingling,\nAs he approached me a-singing this song.",
+    source: "Whoopee-Ti-Yi-Yo, Git Along Little Dogies (Lomax 1910)",
+    time: ["morning"],
+    season: ["spring"],
+    lyricsKey: "lomaxWhoopee",
+    stanzaIndex: 0,
+    // notes: "Opening stanza. Traditional/anonymous. Morning explicit; spring tagged via following verse ('It's early in the spring that we round up the dogies'). Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 87."
+  },
+  // --- Home on the Range (words: Brewster Higley, 1873; collected Lomax 1910) ---
+  {
+    text: "How often at night when the heavens are bright\nWith the light from the glittering stars,\nHave I stood here amazed and asked as I gazed\nIf their glory exceeds that of ours.",
+    source: "Home on the Range (words: Brewster Higley, 1873; collected Lomax 1910)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "lomaxHomeOnTheRange",
+    stanzaIndex: 3,
+    // notes: "Fourth stanza in the Lomax 1910 version. Words originally by Dr. Brewster M. Higley VI as the poem 'My Western Home' (1873); music by Daniel E. Kelley. Lomax is collector only. Night explicit. Published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 39."
+  },
+  // --- Night-Herding Song (Harry Stephens; collected Lomax 1910) ---
+  {
+    text: "Oh, lay still, dogies, since you have laid down,\nStretch away out on the big open ground;\nSnore loud, little dogies, and drown the wild sound\nThat will all go away when the day rolls round.",
+    source: "Night-Herding Song (Harry Stephens; collected Lomax 1910)",
+    time: ["night"],
+    season: [],
+    lyricsKey: "lomaxNightHerding",
+    stanzaIndex: 3,
+    // notes: "Fourth/final stanza. Written by Harry Stephens (Texas cowboy, c. 1890); first published by Lomax in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 324. Night explicit throughout. Stephens recorded the song for the Library of Congress in the 1940s."
+  },
+  // --- The Dying Cowboy (Lomax 1910) ---
+  {
+    text: "Yes, we buried him there on the lone prairie\nWhere the owl all night hoots mournfully,\nAnd the blizzard beats and the winds blow free\nO'er his lowly grave on the lone prairie.",
+    source: "The Dying Cowboy (Lomax 1910)",
+    time: ["night"],
+    season: ["winter"],
+    lyricsKey: "lomaxDyingCowboy",
+    stanzaIndex: 10,
+    // notes: "Near-final stanza of a long ballad. Traditional/anonymous. Night explicit ('all night'); winter tagged via 'blizzard'. Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 3."
+  },
+  // --- The Kansas Line (Lomax 1910) ---
+  {
+    text: "Think I heard the noisy cook say,\n\"Wake up, boys, it's near the break of day\" —\nWay up on the Kansas line,\nAnd slowly we will rise with the sleepy feeling eyes,\nWay up on the Kansas line.",
+    source: "The Kansas Line (Lomax 1910)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "lomaxKansasLine",
+    stanzaIndex: 4,
+    // notes: "Fifth stanza. Traditional/anonymous. Morning explicit ('break of day'). Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 22."
+  },
+  // --- The Railroad Corral (Joseph Mills Hanson, 1904; collected Lomax 1910) ---
+  {
+    text: "Oh, we're up in the morning ere breaking of day,\nThe chuck-wagon's busy, the flapjacks in play;\nThe herd is astir o'er hillside and vale,\nWith the night riders rounding them into the trail.",
+    source: "The Railroad Corral (Joseph Mills Hanson, 1904; collected Lomax 1910)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "lomaxRailroadCorral",
+    stanzaIndex: 0,
+    // notes: "Opening stanza. Written by Joseph Mills Hanson (1876–1960); first published in Frank Leslie's Popular Monthly, 1904. Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 318. Morning explicit ('ere breaking of day')."
+  },
+  {
+    text: "But the longest of days must reach evening at last,\nThe hills all climbed, the creeks all past;\nThe tired herd droops in the yellowing light;\nLet them loaf if they will, for the railroad's in sight.",
+    source: "The Railroad Corral (Joseph Mills Hanson, 1904; collected Lomax 1910)",
+    time: ["evening"],
+    season: [],
+    lyricsKey: "lomaxRailroadCorral",
+    stanzaIndex: 4,
+    // notes: "Fifth stanza. Written by Joseph Mills Hanson (1876–1960). Evening explicit ('yellowing light', end of day arc). Same source as id 7."
+  },
+  // --- Little Joe the Wrangler (N. Howard Thorp, 1898; collected Lomax 1910) ---
+  {
+    text: "Next morning, just at daybreak, we found where Rocket fell\nDown in the washout twenty feet below;\nBeneath the horse's body, a-lying where he fell,\nWas our little Texas stray, poor wrangler Joe.",
+    source: "Little Joe the Wrangler (N. Howard Thorp, 1898; collected Lomax 1910)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "lomaxLittleJoe",
+    stanzaIndex: 7,
+    // notes: "Near-final stanza. Written by N. Howard 'Jack' Thorp (1867–1940); first published in Songs of the Cowboys (1908). Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 167. Morning explicit ('just at daybreak')."
+  },
+  // --- The Old Chisholm Trail (Lomax 1910) ---
+  {
+    text: "I'm up in the mornin' afore daylight,\nAnd afore I sleep the moon shines bright.",
+    source: "The Old Chisholm Trail (Lomax 1910)",
+    time: ["morning", "night"],
+    season: [],
+    lyricsKey: "lomaxChisholmTrail",
+    stanzaIndex: 3,
+    // notes: "Third stanza (approximate; the song is a long cumulative sequence of couplets). Traditional/anonymous. Morning and night both explicit in two lines. Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 58."
+  },
+  // --- When the Work is Done This Fall (D.J. O'Malley, 1893; collected Lomax 1910) ---
+  {
+    text: "That very night this cowboy went out to stand his guard;\nThe night was dark and cloudy and storming very hard;\nThe cattle they got frightened and rushed in wild stampede,\nThe cowboy tried to head them while riding at full speed.",
+    source: "When the Work is Done This Fall (D.J. O'Malley, 1893; collected Lomax 1910)",
+    time: ["night"],
+    season: ["autumn"],
+    lyricsKey: "lomaxWorkDoneThisFall",
+    stanzaIndex: 4,
+    // notes: "Fifth stanza. Written by D.J. O'Malley; first published in the Miles City Stock-Growers Journal, 1893. Collected by Lomax; published in Cowboy Songs and Other Frontier Ballads (Sturgis & Walton, 1910), p. 53. Night explicit; autumn tagged via 'this fall' throughout the song."
+  },
+  {
+    text: "Poor Charlie was buried at sunrise, no tombstone at his head,\nNothing but a little board; and this is what it said:\n\"Charlie died at daybreak, he died from a fall,\nAnd he'll not see his mother when the work's all done this fall.\"",
+    source: "When the Work is Done This Fall (D.J. O'Malley, 1893; collected Lomax 1910)",
+    time: ["morning"],
+    season: ["autumn"],
+    lyricsKey: "lomaxWorkDoneThisFall",
+    stanzaIndex: 7,
+    // notes: "Final stanza. Written by D.J. O'Malley. Morning explicit ('sunrise', 'daybreak'); autumn tagged via 'this fall'. Same source as id 11."
+  },
+  // ── lomax-1934 (────────────────────────────────────────)
+  // --- Gerry's Rocks (Lomax 1934) ---
+  {
+    text: "'Twas on one Sunday morning, as you shall quickly hear,\nOur logs were piled up mountain-high, we could not keep them clear;\n\"Turn out, brave boys,\" the foreman cried, with a voice devoid of fear,\n\"And we'll break up the jam on Gerry's rock and for Eagletown we'll steer.\"",
+    source: "Gerry's Rocks (Lomax 1934)",
+    time: ["morning"],
+    season: [],
+    lyricsKey: "lomax1934GerrysRocks",
+    stanzaIndex: 1,
+    // notes: "Second stanza. Text verified against 1934 edition p. 448-449. Classic lumberjack ballad, traditional/anonymous, North American origin. Lomax sourced from Franz L. Rickaby's Ballads and Songs of the Shanty-Boy. Sunday morning explicit. Lomax's version uses 'Eagletown' rather than 'Agonstown' found in other variants."
+  },
 ];

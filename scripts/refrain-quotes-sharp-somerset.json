@@ -7,7 +7,7 @@
       "pending-wordsmith",
       "hold"
     ],
-    "notes": "Quotes marked pending-wordsmith are proposed but not yet finalised. Do not push to app until status is changed to approved. lyricsKey stubs need to be written and merged into as-it-fell-lyrics-sharp-somerset.json before deployment.",
+    "notes": "Quotes marked pending-wordsmith are proposed but not yet finalised. Do not push to app until status is changed to approved. lyricsKey stubs need to be written and merged into refrain-lyrics-sharp-somerset.json before deployment.",
     "collection": "sharp-somerset"
   },
   "quotes": [

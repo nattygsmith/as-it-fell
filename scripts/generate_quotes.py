@@ -20,18 +20,18 @@ from pathlib import Path
 # ── Config ──────────────────────────────────────────────────────────────────
 
 QUOTE_FILES = [
-    "scripts/as-it-fell-quotes-child.json",
-    "scripts/as-it-fell-quotes-sharp.json",
-    "scripts/as-it-fell-quotes-sharp-somerset.json",
-    "scripts/as-it-fell-quotes-campbell-sharp.json",
-    "scripts/as-it-fell-quotes-karpeles-newfoundland.json",
-    "scripts/as-it-fell-quotes-gardiner-hampshire.json",
-    "scripts/as-it-fell-quotes-lomax.json",
-    "scripts/as-it-fell-quotes-lomax1934.json",
-    "scripts/as-it-fell-quotes-karpeles-appalachian.json",
+    "scripts/refrain-quotes-child.json",
+    "scripts/refrain-quotes-sharp.json",
+    "scripts/refrain-quotes-sharp-somerset.json",
+    "scripts/refrain-quotes-campbell-sharp.json",
+    "scripts/refrain-quotes-karpeles-newfoundland.json",
+    "scripts/refrain-quotes-gardiner-hampshire.json",
+    "scripts/refrain-quotes-lomax.json",
+    "scripts/refrain-quotes-lomax1934.json",
+    "scripts/refrain-quotes-karpeles-appalachian.json",
     # Add future collection files here:
-    # "scripts/as-it-fell-quotes-lloyd.json",
-    # "scripts/as-it-fell-quotes-karpeles.json",
+    # "scripts/refrain-quotes-lloyd.json",
+    # "scripts/refrain-quotes-karpeles.json",
 ]
 
 TARGET_FILE = "src/quotes.js"

@@ -18,18 +18,18 @@ from pathlib import Path
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 LYRICS_FILES = [
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-child.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-sharp-somerset.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-campbell-sharp.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles-newfoundland.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-gardiner-hampshire.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lomax.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lomax1934.json"),
-    os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles-appalachian.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-child.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-sharp.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-sharp-somerset.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-campbell-sharp.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-karpeles-newfoundland.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-gardiner-hampshire.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-lomax.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-lomax1934.json"),
+    os.path.join(SCRIPTS_DIR, "refrain-lyrics-karpeles-appalachian.json"),
     # Add future collections here:
-    # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-karpeles.json"),
-    # os.path.join(SCRIPTS_DIR, "as-it-fell-lyrics-lloyd.json"),
+    # os.path.join(SCRIPTS_DIR, "refrain-lyrics-karpeles.json"),
+    # os.path.join(SCRIPTS_DIR, "refrain-lyrics-lloyd.json"),
 ]
 
 TARGET_FILE = os.path.join(SCRIPTS_DIR, "..", "src", "lyrics.js")

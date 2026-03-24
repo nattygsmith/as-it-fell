@@ -9,7 +9,7 @@
       "hold",
       "retired"
     ],
-    "notes": "Quotes marked pending-wordsmith are proposed but not yet finalised. Do not push to app until status is changed to approved. Cross-check all candidates against as-it-fell-quotes-campbell-sharp.json before approving — the 1917 Campbell/Sharp edition is fully curated and many songs appear in both editions.",
+    "notes": "Quotes marked pending-wordsmith are proposed but not yet finalised. Do not push to app until status is changed to approved. Cross-check all candidates against refrain-quotes-campbell-sharp.json before approving — the 1917 Campbell/Sharp edition is fully curated and many songs appear in both editions.",
     "collection": "karpeles-appalachian"
   },
   "quotes": [
@@ -53,7 +53,7 @@
       "status": "approved",
       "lyricsKey": "karpelesappalachianLittleMusgrave",
       "stanzaIndex": 6,
-      "notes": "The page's message to Lord Darnell. Night explicit; warmth in the dark. Two lines stand alone as image. Version A, sung by Mrs. Becky Griffin, Big Laurel, NC, Aug. 17, 1916. Not in as-it-fell-quotes-campbell-sharp.json — confirmed absent."
+      "notes": "The page's message to Lord Darnell. Night explicit; warmth in the dark. Two lines stand alone as image. Version A, sung by Mrs. Becky Griffin, Big Laurel, NC, Aug. 17, 1916. Not in refrain-quotes-campbell-sharp.json — confirmed absent."
     },
     {
       "id": 6,
@@ -139,7 +139,7 @@
       "status": "approved",
       "lyricsKey": "karpelesappalachianOneMorningInMay",
       "stanzaIndex": 0,
-      "notes": "Opening two lines. Morning and spring both explicit. Collected in Kentucky. Cross-checked against as-it-fell-quotes-sharp.json — not a duplicate (Sharp 1916 has Down by the Green Bushes, a different song with a similar opening formula)."
+      "notes": "Opening two lines. Morning and spring both explicit. Collected in Kentucky. Cross-checked against refrain-quotes-sharp.json — not a duplicate (Sharp 1916 has Down by the Green Bushes, a different song with a similar opening formula)."
     }
   ]
 }

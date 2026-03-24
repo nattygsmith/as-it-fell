@@ -9,9 +9,9 @@ import LyricsScreen from "./LyricsScreen.jsx";
 import AboutOverlay from "./AboutOverlay.jsx";
 
 // ============================================================
-//  FolkClock — root component
+//  Refrain — root component
 // ============================================================
-export default function FolkClock() {
+export default function Refrain() {
   const {
     timeOfDay,
     season,
@@ -35,10 +35,10 @@ export default function FolkClock() {
   // Apply theme tokens as CSS custom properties on the root element
   useEffect(() => {
     const root = document.documentElement;
-    root.style.setProperty("--aif-bg", theme.bg);
-    root.style.setProperty("--aif-ink", theme.ink);
-    root.style.setProperty("--aif-accent", theme.accent);
-    root.style.setProperty("--aif-mist", theme.mist);
+    root.style.setProperty("--rf-bg", theme.bg);
+    root.style.setProperty("--rf-ink", theme.ink);
+    root.style.setProperty("--rf-accent", theme.accent);
+    root.style.setProperty("--rf-mist", theme.mist);
   }, [theme]);
 
   // Ensure viewport-fit=cover so iOS respects safe-area-inset env() vars

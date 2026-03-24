@@ -1684,7 +1684,7 @@ export const QUOTES = [
     season: [],
     lyricsKey: "karpelesappalachianLittleMusgrave",
     stanzaIndex: 6,
-    // notes: "The page's message to Lord Darnell. Night explicit; warmth in the dark. Two lines stand alone as image. Version A, sung by Mrs. Becky Griffin, Big Laurel, NC, Aug. 17, 1916. Not in as-it-fell-quotes-campbell-sharp.json — confirmed absent."
+    // notes: "The page's message to Lord Darnell. Night explicit; warmth in the dark. Two lines stand alone as image. Version A, sung by Mrs. Becky Griffin, Big Laurel, NC, Aug. 17, 1916. Not in refrain-quotes-campbell-sharp.json — confirmed absent."
   },
   // --- Fair Margaret and Sweet William (Sharp/Karpeles 1932, Vol. I, No. 17) ---
   {
@@ -1743,6 +1743,6 @@ export const QUOTES = [
     season: ["spring"],
     lyricsKey: "karpelesappalachianOneMorningInMay",
     stanzaIndex: 0,
-    // notes: "Opening two lines. Morning and spring both explicit. Collected in Kentucky. Cross-checked against as-it-fell-quotes-sharp.json — not a duplicate (Sharp 1916 has Down by the Green Bushes, a different song with a similar opening formula)."
+    // notes: "Opening two lines. Morning and spring both explicit. Collected in Kentucky. Cross-checked against refrain-quotes-sharp.json — not a duplicate (Sharp 1916 has Down by the Green Bushes, a different song with a similar opening formula)."
   },
 ];

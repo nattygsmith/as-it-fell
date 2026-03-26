@@ -2,7 +2,7 @@ import React from "react";
 
 // ============================================================
 //  AboutOverlay
-//  Full-screen overlay describing the app's source collections.
+//  Full-screen page describing the app's source collections.
 //
 //  Props:
 //    onClose  — fn() called when the overlay is dismissed
@@ -11,23 +11,24 @@ export default function AboutOverlay({ onClose }) {
   return (
     <div className="overlay">
 
-      {/* Sticky header — title + close button */}
-      <div className="overlay-header">
-        <div className="info-title">About Refrain</div>
-        <button className="lyrics-close" onClick={onClose}>X</button>
-      </div>
+      {/* Back button — top left */}
+      <button className="about-back" onClick={onClose}>
+        ← Back
+      </button>
 
       {/* Scrollable body */}
       <div className="overlay-body">
 
-        {/* Logo + rule */}
-        <div className="about-logo-wrap">
+        {/* Logo + title */}
+        <div className="about-hero">
           <img
             className="about-logo"
             src="/Refrain_logo.png"
             alt="Refrain"
           />
+<div className="about-hero-title">About Refrain</div>
         </div>
+
         <div className="lyrics-rule">
           <div className="rule-line" />
           <div className="rule-diamond" />

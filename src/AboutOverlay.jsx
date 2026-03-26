@@ -10,14 +10,30 @@ import React from "react";
 export default function AboutOverlay({ onClose }) {
   return (
     <div className="overlay">
-      <button className="lyrics-close" onClick={onClose}>X</button>
+
+      {/* Sticky header — title + close button */}
+      <div className="overlay-header">
+        <div className="info-title">About Refrain</div>
+        <button className="lyrics-close" onClick={onClose}>X</button>
+      </div>
+
+      {/* Scrollable body */}
       <div className="overlay-body">
-        <div className="info-title">About This Collection</div>
+
+        {/* Logo + rule */}
+        <div className="about-logo-wrap">
+          <img
+            className="about-logo"
+            src="/RefrainLogo.png"
+            alt="Refrain"
+          />
+        </div>
         <div className="lyrics-rule">
           <div className="rule-line" />
           <div className="rule-diamond" />
           <div className="rule-line" />
         </div>
+
         <div className="info-body">
           <p>
             These verses are drawn from several collections of folk songs, predominantly

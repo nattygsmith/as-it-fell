@@ -24,7 +24,7 @@ export default function AboutOverlay({ onClose }) {
         <div className="about-logo-wrap">
           <img
             className="about-logo"
-            src="/RefrainLogo.png"
+            src="/Refrain_logo.png"
             alt="Refrain"
           />
         </div>

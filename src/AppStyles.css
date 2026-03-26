@@ -341,12 +341,11 @@ blockquote {
 /* Sticky header row — title + close button */
 .overlay-header {
   width: 100%;
-  max-width: 720px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.75rem clamp(1.5rem, 8vw, 90px) 1rem clamp(1.5rem, 8vw, 90px);
+  padding: 1rem 1.5rem;
   background: var(--rf-bg);
   border-bottom: 1px solid color-mix(in srgb, var(--rf-accent) 20%, transparent);
   box-shadow: 0 2px 10px color-mix(in srgb, var(--rf-ink) 5%, transparent);

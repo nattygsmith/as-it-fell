@@ -12,7 +12,8 @@ html, body {
 
 body {
   background: var(--rf-bg);
-  transition: background 1.2s ease;
+  color: var(--rf-ink);
+  transition: background 1.2s ease, color 1.2s ease;
 }
 
 /* ── Root layout ────────────────────────────────────────── */

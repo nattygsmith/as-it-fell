@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
 import "./AppStyles.css";
 import { DEV_MODE } from "./config.js";
 import { TIME_GLYPHS, TIME_LABELS, SEASON_LABELS } from "./constants.js";
@@ -7,12 +6,12 @@ import { LYRICS } from "./lyrics.js";
 import { QUOTES } from "./quotes.js";
 import { useQuoteClock } from "./useQuoteClock.js";
 import LyricsScreen from "./LyricsScreen.jsx";
-import AboutPage from "./AboutPage.jsx";
+import AboutOverlay from "./AboutOverlay.jsx";
 
 // ============================================================
 //  Refrain — root component
 // ============================================================
-function MainView() {
+export default function Refrain() {
   const {
     timeOfDay,
     season,
@@ -27,7 +26,7 @@ function MainView() {
     setDevSeason,
   } = useQuoteClock();
 
-  const navigate = useNavigate();
+  const [showInfo, setShowInfo] = useState(false);
   const [showLyrics, setShowLyrics] = useState(false);
   const [fadeKey, setFadeKey] = useState(0);
   const [devSearch, setDevSearch] = useState("");
@@ -54,12 +53,26 @@ function MainView() {
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === "Escape") {
+        setShowInfo(false);
         setShowLyrics(false);
+        setPinnedQuote(null);
       }
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
+
+  // Open lyrics and pin the current quote so a 15-min auto-refresh can't swap it
+  const handleOpenLyrics = () => {
+    setPinnedQuote(displayQuote);
+    setShowLyrics(true);
+  };
+
+  // Close lyrics and release the pin (normal rotation resumes)
+  const handleCloseLyrics = () => {
+    setShowLyrics(false);
+    setPinnedQuote(null);
+  };
 
   // Trigger fade animation and clear pinned quote on manual refresh
   const handleRefresh = () => {
@@ -92,7 +105,7 @@ function MainView() {
           <span className="glyph">{TIME_GLYPHS[timeOfDay]}</span>
           {TIME_LABELS[timeOfDay]} · {SEASON_LABELS[season]}
         </div>
-        <button className="info-btn" onClick={() => navigate("/about")}>
+        <button className="info-btn" onClick={() => setShowInfo(true)}>
           About
         </button>
       </div>
@@ -119,7 +132,7 @@ function MainView() {
             {displayQuote.lyricsKey && LYRICS[displayQuote.lyricsKey] ? (
               <button
                 className="attribution-link"
-                onClick={() => setShowLyrics(true)}
+                onClick={handleOpenLyrics}
               >
                 — {displayQuote.source}
               </button>
@@ -147,12 +160,15 @@ function MainView() {
         </p>
       </div>
 
+      {/* About overlay */}
+      {showInfo && <AboutOverlay onClose={() => setShowInfo(false)} />}
+
       {/* Lyrics overlay */}
       {showLyrics && displayQuote.lyricsKey && LYRICS[displayQuote.lyricsKey] && (
         <LyricsScreen
           entry={LYRICS[displayQuote.lyricsKey]}
           stanzaIndex={displayQuote.stanzaIndex}
-          onClose={() => setShowLyrics(false)}
+          onClose={handleCloseLyrics}
         />
       )}
 
@@ -239,14 +255,5 @@ function MainView() {
       )}
 
     </div>
-  );
-}
-
-export default function Refrain() {
-  return (
-    <Routes>
-      <Route path="/" element={<MainView />} />
-      <Route path="/about" element={<AboutPage />} />
-    </Routes>
   );
 }

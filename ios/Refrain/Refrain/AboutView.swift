@@ -58,7 +58,7 @@ struct AboutView: View {
                     // ── Body ────────────────────────────────────────────
                     VStack(alignment: .leading, spacing: 16) {
                         Group {
-                            Text("These verses are drawn from several collections of folk songs, predominantly from the British Isles, the United States, and Canada. Each verse is chosen to match the time of day and season of your location. The words have been lightly modernized where needed.")
+                            Text("Refrain draws verses from several collections of folk songs, predominantly from the British Isles, the United States, and Canada. Each verse is chosen to match the time of day and season of your location. The words have been lightly modernized where needed.")
                             Text("The verses are beautiful enough on their own, but they are meant to be sung. Find recordings, listen to them, learn them, and sing them!")
                             Text("A new verse appears every 15 minutes, or tap Another whenever you like.")
                         }

@@ -210,7 +210,8 @@
       "season": [
         "spring"
       ],
-      "status": "approved",
+      "status": "retired",
+      "notes": "No time-of-day marker in the verse itself. Time tags were inherited from ID 13 (same ballad). Retired for lacking an explicit time anchor.",
       "lyricsKey": "child43",
       "stanzaIndex": 7
     },

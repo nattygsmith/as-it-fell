@@ -115,14 +115,6 @@ export const QUOTES = [
     stanzaIndex: 0,
     // notes: "Version A, stanza 1. 'ane gaed'→'one went'. No other changes."
   },
-  {
-    text: "She pulled the blossom of the broom,\nThe blossom it smells sweet.",
-    source: "The Broomfield Hill (Child 43)",
-    time: ["morning", "afternoon"],
-    season: ["spring"],
-    lyricsKey: "child43",
-    stanzaIndex: 7,
-  },
   // --- Sir Patrick Spens (Child 58) ---
   {
     text: "Late late last night I saw the new moon,\nWith the old moon in her arm;\nAnd I fear, I fear, my dear master,\nThat we will come to harm.",

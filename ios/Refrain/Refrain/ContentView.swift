@@ -76,12 +76,14 @@ struct ContentView: View {
                             Text("— \(quote.source)")
                                 .font(.custom("IM_FELL_English_Roman", size: 12))
                                 .textCase(.uppercase)
+                                .multilineTextAlignment(.center)
                                 .foregroundStyle(
                                     hasLyrics
                                         ? theme.accent
                                         : theme.accent.opacity(0.5)
                                 )
                                 .underline(hasLyrics, color: theme.accent.opacity(0.5))
+                                .padding(.horizontal, 48)
                                 .padding(.top, 8)
                         }
                         .disabled(!hasLyrics)

@@ -8,11 +8,17 @@ import SwiftUI
 struct AboutView: View {
     let theme: Theme
     @Environment(\.dismiss) private var dismiss
+    @State private var scrollOffset: CGFloat = 0
+
+    // Fade kicks in after scrolling 40pt, fully opaque by 80pt
+    private var fadeOpacity: CGFloat {
+        min(max((scrollOffset - 40) / 40, 0), 1)
+    }
 
     var body: some View {
         ZStack {
+            // ── Background — always full screen ─────────────────────
             theme.bg.ignoresSafeArea()
-
             RadialGradient(
                 colors: [theme.mist.opacity(0.5), theme.bg.opacity(0)],
                 center: .init(x: 0.5, y: 0.3),
@@ -21,10 +27,21 @@ struct AboutView: View {
             )
             .ignoresSafeArea()
 
+            // ── Content ──────────────────────────────────────────────
             ScrollView {
+                // Scroll offset tracker
+                GeometryReader { geo in
+                    Color.clear
+                        .preference(
+                            key: ScrollOffsetKey.self,
+                            value: -geo.frame(in: .named("scroll")).minY
+                        )
+                }
+                .frame(height: 0)
+
                 VStack(alignment: .center, spacing: 0) {
 
-                    // ── Header ──────────────────────────────────────────
+                    // ── Hero ────────────────────────────────────────────
                     HStack {
                         Spacer()
                         Button {
@@ -38,14 +55,14 @@ struct AboutView: View {
                     }
                     .padding(.horizontal, 16)
                     .padding(.top, 8)
+
                     Image("RefrainLogo")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
                         .padding(.bottom, 8)
 
- 
-                    Text("Refrain")
+                    Text("About Refrain")
                         .font(.custom("IM_FELL_English_Roman", size: 26))
                         .textCase(.uppercase)
                         .foregroundStyle(theme.accent)
@@ -57,52 +74,50 @@ struct AboutView: View {
 
                     // ── Body ────────────────────────────────────────────
                     VStack(alignment: .leading, spacing: 16) {
-                        Group {
-                            Text("Refrain draws verses from several collections of folk songs, predominantly from the British Isles, the United States, and Canada. Each verse is chosen to match the time of day and season of your location. The words have been lightly modernized where needed.")
-                            Text("The verses are beautiful enough on their own, but they are meant to be sung. Find recordings, listen to them, learn them, and sing them!")
-                            Text("A new verse appears every 15 minutes, or tap Another whenever you like.")
-                        }
-                        .font(.system(size: 15))
-                        .foregroundStyle(theme.ink.opacity(0.85))
-                    }
-                    .padding(.horizontal, 32)
-                    .padding(.vertical, 24)
+                        Text("Refrain draws verses from several collections of folk songs, predominantly from the British Isles, the United States, and Canada. Each verse is chosen to match the time of day and season of your location. The words have been lightly modernized where needed.")
+                        Text("The verses are beautiful enough on their own, but they are meant to be sung. Find recordings, listen to them, learn them, and sing them!")
+                        Text("A new verse appears every 15 minutes, or tap Another whenever you like.")
 
-                    Divider()
-                        .overlay(theme.accent.opacity(0.3))
-                        .padding(.horizontal, 40)
-
-                    // ── Collections ─────────────────────────────────────
-                    VStack(alignment: .leading, spacing: 0) {
+                        Divider()
+                            .overlay(theme.accent.opacity(0.3))
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 8)
 
                         Text("The verses come from a number of fieldwork collections, most gathered in the late nineteenth and early twentieth centuries:")
-                            .font(.system(size: 15))
-                            .foregroundStyle(theme.ink.opacity(0.85))
-                            .padding(.bottom, 20)
 
                         ForEach(collections, id: \.title) { collection in
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(collection.title)
-                                    .font(.custom("IM_FELL_English_Roman", size: 16))
-                                    .textCase(.uppercase)
-                                    .foregroundStyle(theme.accent)
+                                    .fontWeight(.bold)
                                 Text(collection.description)
-                                    .font(.system(size: 15))
-                                    .foregroundStyle(theme.ink.opacity(0.85))
                                     .lineSpacing(3)
                             }
-                            .padding(.bottom, 16)
                         }
                     }
+                    .font(.system(size: 15))
+                    .foregroundStyle(theme.ink.opacity(0.85))
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 32)
                     .padding(.top, 24)
-                    .padding(.bottom, 48)
+                    .padding(.bottom, 80)
                 }
             }
+            .coordinateSpace(name: "scroll")
+            .onPreferenceChange(ScrollOffsetKey.self) { scrollOffset = $0 }
+            .ignoresSafeArea(edges: .bottom)
+            .mask {
+                VStack(spacing: 0) {
+                    LinearGradient(
+                        colors: [.black.opacity(1 - fadeOpacity), .black],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                    .frame(height: 60)
+                    Rectangle()
+                }
+                .ignoresSafeArea(edges: .bottom)
+            }
         }
-        // fullScreenCover doesn't support swipe-down by default —
-        // this re-enables it via the interactiveDismissDisabled modifier
-        // set to false (the default, included here for clarity).
         .interactiveDismissDisabled(false)
     }
 
@@ -151,4 +166,13 @@ struct AboutView: View {
             description: "Around 200 songs collected by John A. Lomax and Alan Lomax from across the United States and published in 1934. The collection ranges widely: lumberjack and canal songs, frontier ballads, Appalachian mountain songs, sea shanties, and work songs."
         ),
     ]
+}
+
+// MARK: - Scroll offset preference key
+
+private struct ScrollOffsetKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
 }

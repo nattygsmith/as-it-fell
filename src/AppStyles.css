@@ -258,7 +258,7 @@ blockquote {
 .lyrics-overlay {
   position: fixed;
   inset: 0;
-  background: var(--rf-bg);
+  background: color-mix(in srgb, var(--rf-mist) 30%, var(--rf-bg));
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -310,7 +310,7 @@ blockquote {
   font-weight: 700;
 }
 
-/* ── About overlay ──────────────────────────────────────── */
+/* ── About page ──────────────────────────────────────── */
 
 .overlay {
   position: fixed;
@@ -346,7 +346,7 @@ blockquote {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: var(--rf-bg);
+  background: color-mix(in srgb, var(--rf-mist) 30%, var(--rf-bg));
   padding: 1rem 1.5rem 0.75rem;
   border-bottom: 1px solid transparent;
   box-shadow: none;

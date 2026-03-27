@@ -1,17 +1,43 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useQuoteClock } from "./useQuoteClock.js";
 
 export default function AboutPage() {
   const navigate = useNavigate();
+  const { theme } = useQuoteClock();
+  const scrollRef = useRef(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Apply theme tokens so the background matches the main view
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--rf-bg", theme.bg);
+    root.style.setProperty("--rf-ink", theme.ink);
+    root.style.setProperty("--rf-accent", theme.accent);
+    root.style.setProperty("--rf-mist", theme.mist);
+  }, [theme]);
+
+  // Show shadow on back bar once user scrolls
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => setScrolled(el.scrollTop > 4);
+    el.addEventListener("scroll", onScroll);
+    return () => el.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <div className="overlay">
 
-      <button className="about-back" onClick={() => navigate("/")}>
-        ← Back
-      </button>
+      {/* Sticky back bar */}
+      <div className={`about-back-bar${scrolled ? " about-back-bar--scrolled" : ""}`}>
+        <button className="about-back" onClick={() => navigate("/")}>
+          ← Back
+        </button>
+      </div>
 
-      <div className="overlay-body">
+      {/* Scrollable body */}
+      <div className="overlay-body" ref={scrollRef}>
 
         <div className="about-hero">
           <img

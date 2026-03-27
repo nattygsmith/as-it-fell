@@ -4,14 +4,15 @@ import { DEV_MODE } from "./config.js";
 import { TIME_GLYPHS, TIME_LABELS, SEASON_LABELS } from "./constants.js";
 import { LYRICS } from "./lyrics.js";
 import { QUOTES } from "./quotes.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Routes, Route } from "react-router-dom";
 import { useQuoteClock } from "./useQuoteClock.js";
 import LyricsScreen from "./LyricsScreen.jsx";
+import AboutPage from "./AboutPage.jsx";
 
 // ============================================================
-//  Refrain — root component
+//  Refrain — main view
 // ============================================================
-export default function Refrain() {
+function Refrain() {
   const navigate = useNavigate();
   const {
     timeOfDay,
@@ -251,5 +252,17 @@ export default function Refrain() {
       )}
 
     </div>
+  );
+}
+
+// ============================================================
+//  App — root component with routing
+// ============================================================
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Refrain />} />
+      <Route path="/about" element={<AboutPage />} />
+    </Routes>
   );
 }

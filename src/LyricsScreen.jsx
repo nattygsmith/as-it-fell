@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useQuoteClock } from "./useQuoteClock.js";
 
 // ============================================================
 //  LyricsScreen
@@ -13,6 +14,16 @@ import React, { useEffect, useRef } from "react";
 // ============================================================
 export default function LyricsScreen({ entry, stanzaIndex, onClose }) {
   const highlightRef = useRef(null);
+  const { theme } = useQuoteClock();
+
+  // Apply theme tokens (ensures correct background if tokens aren't already set)
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--rf-bg", theme.bg);
+    root.style.setProperty("--rf-ink", theme.ink);
+    root.style.setProperty("--rf-accent", theme.accent);
+    root.style.setProperty("--rf-mist", theme.mist);
+  }, [theme]);
 
   useEffect(() => {
     if (highlightRef.current) {

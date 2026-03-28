@@ -328,14 +328,19 @@ blockquote {
 }
 
 .overlay-body {
-  padding: 0 clamp(1.5rem, 8vw, 90px) 2rem clamp(1.5rem, 8vw, 90px);
-  max-width: 720px;
   width: 100%;
   flex: 1;
   overflow-y: auto;
 }
 
-.overlay-body .lyrics-rule {
+.overlay-body-inner {
+  padding: 0 clamp(1.5rem, 8vw, 90px) 2rem clamp(1.5rem, 8vw, 90px);
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.overlay-body-inner .lyrics-rule {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 0.75rem;
@@ -383,8 +388,8 @@ blockquote {
 }
 
 .about-logo {
-  width: 110px;
-  height: 110px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
 }
 
@@ -426,8 +431,8 @@ blockquote {
 }
 
 .about-logo {
-  width: 110px;
-  height: 110px;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
 }
 

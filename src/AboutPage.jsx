@@ -38,6 +38,7 @@ export default function AboutPage() {
 
       {/* Scrollable body */}
       <div className="overlay-body" ref={scrollRef}>
+        <div className="overlay-body-inner">
 
         <div className="about-hero">
           <img
@@ -146,17 +147,9 @@ export default function AboutPage() {
               folk song that shapes most of this collection. Songs are traditional and anonymous
               unless otherwise noted.
             </li>
-            <li>
-              <strong>Songs of the West</strong>—121 traditional folk songs of Devon and
-              Cornwall, collected from singers in the field by Sabine Baring-Gould with Henry
-              Fleetwood Sheppard and F.W. Bussell, and published in 1905 with Cecil Sharp as
-              musical editor. Baring-Gould began collecting in 1888, visiting old men in their
-              cottages, farmhouses, and moorland taverns across the West Country. The songs
-              have a strongly pastoral character, featuring mornings on the moor, rural labour,
-              and the Devon and Cornish landscape.
-            </li>
           </ul>
         </div>
+      </div>{/* overlay-body-inner */}
       </div>
     </div>
   );

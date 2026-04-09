@@ -84,7 +84,7 @@ export default function AboutPage() {
           <div className="about-store-row">
             <a
               className="about-store-badge"
-              href="https://apps.apple.com/app/refrain/id0000000000"
+              href="https://apps.apple.com/app/id6761557395"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download on the App Store"

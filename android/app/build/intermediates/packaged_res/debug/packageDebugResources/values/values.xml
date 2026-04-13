@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FFFBE4</color>
+    <string name="app_name">Refrain</string>
+    <string name="widget_description">A verse from the folk tradition, matched to the time of day.</string>
+    <style name="Theme.Refrain" parent="android:Theme.Black.NoTitleBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+</resources>

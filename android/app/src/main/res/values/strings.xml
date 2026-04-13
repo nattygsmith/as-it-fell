@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Refrain</string>
+    <string name="widget_description">A verse from the folk tradition, matched to the time of day.</string>
+</resources>

@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import { DEV_MODE } from "./config.js";
 import { THEMES } from "./constants.js";
 import { getTimeOfDay, getSeason, getPool, pickQuote } from "./helpers.js";
 
@@ -14,22 +13,25 @@ import { getTimeOfDay, getSeason, getPool, pickQuote } from "./helpers.js";
 //    quote         — currently displayed quote object (or null on init)
 //    pool          — array of matching quotes for current time/season
 //    refresh       — fn(lastQuote) → picks a new quote
-//    devTime       — (DEV_MODE only) override time value
-//    setDevTime    — (DEV_MODE only) setter
-//    devSeason     — (DEV_MODE only) override season value
-//    setDevSeason  — (DEV_MODE only) setter
+//    devTime       — current override time value
+//    setDevTime    — setter (only takes effect when adminOpen is true)
+//    devSeason     — current override season value
+//    setDevSeason  — setter (only takes effect when adminOpen is true)
+//    adminOpen     — whether admin override is active
+//    setAdminOpen  — toggle admin mode on/off
 // ============================================================
 export function useQuoteClock() {
   const [now, setNow] = useState(new Date());
   const [quote, setQuote] = useState(null);
   const [lastQuote, setLastQuote] = useState(null);
+  const [adminOpen, setAdminOpen] = useState(false);
   const [devTime, setDevTime] = useState(getTimeOfDay(new Date().getHours()));
   const [devSeason, setDevSeason] = useState(getSeason(new Date().getMonth()));
 
   const hour = now.getHours();
   const month = now.getMonth();
-  const timeOfDay = DEV_MODE ? devTime : getTimeOfDay(hour);
-  const season = DEV_MODE ? devSeason : getSeason(month);
+  const timeOfDay = adminOpen ? devTime : getTimeOfDay(hour);
+  const season    = adminOpen ? devSeason : getSeason(month);
   const theme = THEMES[timeOfDay][season];
   const pool = getPool(timeOfDay, season);
 
@@ -49,8 +51,9 @@ export function useQuoteClock() {
     refresh(null);
   }, []);
 
-  // Auto-refresh at the next 15-minute boundary
+  // Auto-refresh at the next 15-minute boundary (skipped when admin override active)
   useEffect(() => {
+    if (adminOpen) return;
     const next = new Date(now);
     const minsUntilNext = 15 - (next.getMinutes() % 15);
     next.setMinutes(next.getMinutes() + minsUntilNext, 0, 0);
@@ -60,7 +63,7 @@ export function useQuoteClock() {
       refresh(null);
     }, ms);
     return () => clearTimeout(t);
-  }, [now]);
+  }, [now, adminOpen]);
 
   // Re-pick when time slot or season changes
   useEffect(() => {
@@ -79,5 +82,7 @@ export function useQuoteClock() {
     setDevTime,
     devSeason,
     setDevSeason,
+    adminOpen,
+    setAdminOpen,
   };
 }

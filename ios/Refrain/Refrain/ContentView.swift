@@ -15,6 +15,12 @@ struct ContentView: View {
     @State private var clock = QuoteClock()
     @State private var showAbout = false
 
+    // ── Admin mode ────────────────────────────────────────────────────────────
+    // Activated by long-pressing the time/season label. In-memory only;
+    // resets on app relaunch. Time/season overrides are driven through clock
+    // directly so the pool and quote update automatically.
+    @State private var adminOpen = false
+
     // ── Lyrics state ─────────────────────────────────────────────────────
     // showLyrics is the single source of truth for whether lyrics are visible.
     // How they're displayed depends on the device and orientation:
@@ -131,7 +137,13 @@ struct ContentView: View {
                 )
                 .font(.custom("IM_FELL_English_Roman", size: headerFontSize))
                 .textCase(.uppercase)
-                .foregroundStyle(theme.ink.opacity(0.6))
+                .foregroundStyle(adminOpen ? theme.accent : theme.ink.opacity(0.6))
+                .onLongPressGesture(minimumDuration: 0.6) {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        adminOpen.toggle()
+                        if !adminOpen { clock.clearAdminOverride() }
+                    }
+                }
 
                 Spacer()
 
@@ -142,6 +154,34 @@ struct ContentView: View {
             }
             .padding(.horizontal, 28)
             .padding(.top, 16)
+
+            // Admin picker row — visible when adminOpen
+            if adminOpen {
+                HStack(spacing: 12) {
+                    Picker("Time", selection: Binding(
+                        get: { clock.timeOfDay },
+                        set: { clock.setAdminOverride(time: $0, season: clock.season) }
+                    )) {
+                        ForEach(TimeOfDay.allCases, id: \.self) { t in
+                            Text(t.rawValue.capitalized).tag(t)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+
+                    Picker("Season", selection: Binding(
+                        get: { clock.season },
+                        set: { clock.setAdminOverride(time: clock.timeOfDay, season: $0) }
+                    )) {
+                        ForEach(Season.allCases, id: \.self) { s in
+                            Text(s.rawValue.capitalized).tag(s)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
+                .padding(.horizontal, 28)
+                .padding(.top, 8)
+                .transition(.opacity.combined(with: .move(edge: .top)))
+            }
 
             Divider()
                 .overlay(theme.accent.opacity(0.3))

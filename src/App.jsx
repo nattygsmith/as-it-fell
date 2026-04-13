@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import "./AppStyles.css";
 import { TIME_GLYPHS, TIME_LABELS, SEASON_LABELS } from "./constants.js";
 import { LYRICS } from "./lyrics.js";
@@ -7,22 +7,6 @@ import { useNavigate, Routes, Route } from "react-router-dom";
 import { useQuoteClock } from "./useQuoteClock.js";
 import LyricsScreen from "./LyricsScreen.jsx";
 import AboutPage from "./AboutPage.jsx";
-
-// ── Admin mode helpers ────────────────────────────────────────────────────────
-// Persisted in sessionStorage so it survives refresh but resets on tab close.
-const ADMIN_KEY = "refrain_admin";
-function loadAdminState() {
-  try {
-    const raw = sessionStorage.getItem(ADMIN_KEY);
-    return raw ? JSON.parse(raw) : null;
-  } catch { return null; }
-}
-function saveAdminState(state) {
-  try {
-    if (state) sessionStorage.setItem(ADMIN_KEY, JSON.stringify(state));
-    else sessionStorage.removeItem(ADMIN_KEY);
-  } catch { /* ignore */ }
-}
 
 // ============================================================
 //  Refrain — main view
@@ -41,39 +25,21 @@ function Refrain() {
     setDevTime,
     devSeason,
     setDevSeason,
+    adminOpen,
+    setAdminOpen,
   } = useQuoteClock();
 
   const [showLyrics, setShowLyrics] = useState(false);
   const [fadeKey, setFadeKey] = useState(0);
   const [pinnedQuote, setPinnedQuote] = useState(null);
-
-  // ── Admin mode ──────────────────────────────────────────────────────────────
-  // Activated by long-pressing the time/season badge. Persisted in sessionStorage.
-  const [adminOpen, setAdminOpen] = useState(() => {
-    const saved = loadAdminState();
-    return saved?.open ?? false;
-  });
   const [devSearch, setDevSearch] = useState("");
   const longPressTimer = useRef(null);
-
-  // Restore devTime/devSeason from sessionStorage on mount
-  useEffect(() => {
-    const saved = loadAdminState();
-    if (saved?.time) setDevTime(saved.time);
-    if (saved?.season) setDevSeason(saved.season);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // Persist admin state whenever it changes
-  useEffect(() => {
-    saveAdminState(adminOpen ? { open: true, time: devTime, season: devSeason } : null);
-  }, [adminOpen, devTime, devSeason]);
 
   const handleBadgePressStart = useCallback(() => {
     longPressTimer.current = setTimeout(() => {
       setAdminOpen(prev => !prev);
     }, 600);
-  }, []);
+  }, [setAdminOpen]);
 
   const handleBadgePressEnd = useCallback(() => {
     clearTimeout(longPressTimer.current);

@@ -21,6 +21,7 @@ final class QuoteClock {
     private(set) var season: Season = .spring
     private(set) var quote: Quote? = nil
     private(set) var pool: [Quote] = []
+    private(set) var isAdminOverride: Bool = false
 
     // MARK: - Private state
 
@@ -59,11 +60,30 @@ final class QuoteClock {
         quote = pickQuote(from: pool, excluding: lastQuoteID)
     }
 
+    /// Override time and season for admin/preview purposes.
+    /// Rebuilds the pool immediately; does not affect the timer.
+    func setAdminOverride(time: TimeOfDay, season: Season) {
+        isAdminOverride = true
+        timeOfDay  = time
+        self.season = season
+        lastQuoteID = nil
+        pool  = store.quotes(for: timeOfDay, season: self.season)
+        quote = pickQuote(from: pool, excluding: nil)
+    }
+
+    /// Clear admin override and restore real time/season.
+    func clearAdminOverride() {
+        isAdminOverride = false
+        refresh(updateTimeSeason: true)
+    }
+
     // MARK: - Internal
 
     /// Full refresh: optionally re-evaluate time/season, rebuild pool, pick quote.
     /// Called on init, on timer tick, and (time/season only) when app foregrounds.
+    /// No-ops if an admin override is active (admin clears it explicitly).
     private func refresh(updateTimeSeason: Bool) {
+        guard !isAdminOverride else { return }
         if updateTimeSeason {
             let newTime   = TimeOfDay.current
             let newSeason = Season.current

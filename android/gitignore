@@ -1,0 +1,25 @@
+# Built outputs
+build/
+app/build/
+
+# Gradle
+.gradle/
+gradle-wrapper.jar
+
+# Local configuration — contains SDK path, varies per machine
+local.properties
+
+# Signing keystores — NEVER commit these
+*.jks
+*.keystore
+
+# IDE files
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Generated code — recreated by generate scripts, not source of truth
+# (quotes.json and lyrics.json in assets/ ARE committed since they're
+# the bundled content the app ships with)

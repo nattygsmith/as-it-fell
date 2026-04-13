@@ -5,10 +5,15 @@ import SwiftUI
 /// Full-screen cover showing the app description and collection credits.
 /// Dismisses with swipe-down (handled automatically by fullScreenCover +
 /// the explicit close button for users who don't know the gesture).
+///
+/// On iPad, content is centred with a max width of 640pt so it doesn't
+/// sprawl across the full canvas.
 struct AboutView: View {
     let theme: Theme
     @Environment(\.dismiss) private var dismiss
     @State private var scrollOffset: CGFloat = 0
+
+    private var isPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
 
     // Fade kicks in after scrolling 40pt, fully opaque by 80pt
     private var fadeOpacity: CGFloat {
@@ -23,7 +28,7 @@ struct AboutView: View {
                 colors: [theme.mist.opacity(0.5), theme.bg.opacity(0)],
                 center: .init(x: 0.5, y: 0.3),
                 startRadius: 0,
-                endRadius: 320
+                endRadius: isPad ? 480 : 320
             )
             .ignoresSafeArea()
 
@@ -39,6 +44,7 @@ struct AboutView: View {
                 }
                 .frame(height: 0)
 
+                // Centred content column — capped on iPad
                 VStack(alignment: .center, spacing: 0) {
 
                     // ── Hero ────────────────────────────────────────────
@@ -121,11 +127,14 @@ struct AboutView: View {
                     }
                     .font(.system(size: 15))
                     .foregroundStyle(theme.ink.opacity(0.85))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal, 32)
+                    .frame(maxWidth: isPad ? 640 : .infinity, alignment: .leading)
+                    .padding(.horizontal, isPad ? 0 : 32)
                     .padding(.top, 24)
                     .padding(.bottom, 80)
                 }
+                // On iPad, centre the body column within the full width
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, isPad ? 40 : 0)
             }
             .coordinateSpace(name: "scroll")
             .onPreferenceChange(ScrollOffsetKey.self) { scrollOffset = $0 }

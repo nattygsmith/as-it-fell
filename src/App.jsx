@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./AppStyles.css";
-import { DEV_MODE } from "./config.js";
 import { TIME_GLYPHS, TIME_LABELS, SEASON_LABELS } from "./constants.js";
 import { LYRICS } from "./lyrics.js";
 import { QUOTES } from "./quotes.js";
@@ -8,7 +7,22 @@ import { useNavigate, Routes, Route } from "react-router-dom";
 import { useQuoteClock } from "./useQuoteClock.js";
 import LyricsScreen from "./LyricsScreen.jsx";
 import AboutPage from "./AboutPage.jsx";
-import PrivacyPage from "./PrivacyPage.jsx";
+
+// ── Admin mode helpers ────────────────────────────────────────────────────────
+// Persisted in sessionStorage so it survives refresh but resets on tab close.
+const ADMIN_KEY = "refrain_admin";
+function loadAdminState() {
+  try {
+    const raw = sessionStorage.getItem(ADMIN_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+function saveAdminState(state) {
+  try {
+    if (state) sessionStorage.setItem(ADMIN_KEY, JSON.stringify(state));
+    else sessionStorage.removeItem(ADMIN_KEY);
+  } catch { /* ignore */ }
+}
 
 // ============================================================
 //  Refrain — main view
@@ -31,8 +45,39 @@ function Refrain() {
 
   const [showLyrics, setShowLyrics] = useState(false);
   const [fadeKey, setFadeKey] = useState(0);
-  const [devSearch, setDevSearch] = useState("");
   const [pinnedQuote, setPinnedQuote] = useState(null);
+
+  // ── Admin mode ──────────────────────────────────────────────────────────────
+  // Activated by long-pressing the time/season badge. Persisted in sessionStorage.
+  const [adminOpen, setAdminOpen] = useState(() => {
+    const saved = loadAdminState();
+    return saved?.open ?? false;
+  });
+  const [devSearch, setDevSearch] = useState("");
+  const longPressTimer = useRef(null);
+
+  // Restore devTime/devSeason from sessionStorage on mount
+  useEffect(() => {
+    const saved = loadAdminState();
+    if (saved?.time) setDevTime(saved.time);
+    if (saved?.season) setDevSeason(saved.season);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Persist admin state whenever it changes
+  useEffect(() => {
+    saveAdminState(adminOpen ? { open: true, time: devTime, season: devSeason } : null);
+  }, [adminOpen, devTime, devSeason]);
+
+  const handleBadgePressStart = useCallback(() => {
+    longPressTimer.current = setTimeout(() => {
+      setAdminOpen(prev => !prev);
+    }, 600);
+  }, []);
+
+  const handleBadgePressEnd = useCallback(() => {
+    clearTimeout(longPressTimer.current);
+  }, []);
 
   // Apply theme tokens as CSS custom properties on the root element
   useEffect(() => {
@@ -89,7 +134,7 @@ function Refrain() {
   const displayQuote = pinnedQuote || quote;
 
   const devSearchResults =
-    DEV_MODE && devSearch.trim().length >= 2
+    adminOpen && devSearch.trim().length >= 2
       ? QUOTES.filter(
           (q) =>
             q.source.toLowerCase().includes(devSearch.toLowerCase()) ||
@@ -102,7 +147,15 @@ function Refrain() {
 
       {/* Header */}
       <div className="header">
-        <div className="time-badge">
+        <div
+          className={`time-badge${adminOpen ? " time-badge--admin" : ""}`}
+          onMouseDown={handleBadgePressStart}
+          onMouseUp={handleBadgePressEnd}
+          onMouseLeave={handleBadgePressEnd}
+          onTouchStart={handleBadgePressStart}
+          onTouchEnd={handleBadgePressEnd}
+          style={{ userSelect: "none", cursor: "default" }}
+        >
           <span className="glyph">{TIME_GLYPHS[timeOfDay]}</span>
           {TIME_LABELS[timeOfDay]} · {SEASON_LABELS[season]}
         </div>
@@ -170,8 +223,8 @@ function Refrain() {
         />
       )}
 
-      {/* Dev panel */}
-      {DEV_MODE && (
+      {/* Admin panel — activated by long-pressing the time/season badge */}
+      {adminOpen && (
         <div className="dev-bar">
           <div className="dev-bar-row">
             <label>Time</label>
@@ -264,7 +317,6 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Refrain />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
     </Routes>
   );
 }

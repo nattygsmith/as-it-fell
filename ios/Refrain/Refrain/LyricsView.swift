@@ -2,20 +2,28 @@ import SwiftUI
 
 // MARK: - LyricsView
 
-/// Partial bottom sheet showing the full lyrics for the current quote's song.
-/// The stanza that contains the displayed quote is highlighted.
-/// Scrollable — opens scrolled to the highlighted stanza, then free to scroll.
+/// Displays the full lyrics for the current quote's song.
+/// The stanza containing the displayed quote is highlighted.
+///
+/// Used in two contexts:
+/// - Bottom sheet (iPhone + iPad portrait): standard scrolling column.
+/// - Side panel (iPad landscape): same layout, hosted inside ContentView's
+///   overlay panel rather than a sheet.
+///
+/// On iPad, content is capped in width so it doesn't sprawl on wide screens.
 struct LyricsView: View {
     let entry: LyricsEntry
     let stanzaIndex: Int?
     let theme: Theme
+
+    private var isPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
 
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
                 VStack(alignment: .center, spacing: 0) {
 
-                    // ── Header ──────────────────────────────────────────
+                    // ── Header ───────────────────────────────────────────
                     VStack(spacing: 4) {
                         Text(entry.title)
                             .font(.custom("IM_FELL_English_Roman", size: 20))
@@ -42,7 +50,7 @@ struct LyricsView: View {
                         .overlay(theme.accent.opacity(0.25))
                         .padding(.horizontal, 28)
 
-                    // ── Stanzas ─────────────────────────────────────────
+                    // ── Stanzas ──────────────────────────────────────────
                     VStack(spacing: 20) {
                         ForEach(Array(entry.stanzas.enumerated()), id: \.offset) { index, stanza in
                             Text(stanza)
@@ -62,25 +70,33 @@ struct LyricsView: View {
                                         : Color.clear
                                 )
                                 .cornerRadius(6)
-                                .id(index) // anchor for ScrollViewReader
+                                .id(index)
                         }
                     }
                     .padding(.vertical, 24)
+                    // Cap width on iPad so the single column doesn't sprawl
+                    .frame(maxWidth: isPad ? 520 : .infinity)
+                    .frame(maxWidth: .infinity)
 
-                    // Bottom breathing room for home indicator
                     Spacer(minLength: 40)
                 }
             }
             .onAppear {
-                // Scroll to the highlighted stanza on open,
-                // with a short delay to let the sheet animate in first
-                if let index = stanzaIndex {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
-                        withAnimation {
-                            proxy.scrollTo(index, anchor: .center)
-                        }
-                    }
-                }
+                scrollTo(index: stanzaIndex, proxy: proxy, delay: 0.35)
+            }
+            .onChange(of: stanzaIndex) { newIndex in
+                scrollTo(index: newIndex, proxy: proxy, delay: 0.1)
+            }
+        }
+    }
+
+    // MARK: - Helpers
+
+    private func scrollTo(index: Int?, proxy: ScrollViewProxy, delay: Double) {
+        guard let index else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            withAnimation {
+                proxy.scrollTo(index, anchor: .center)
             }
         }
     }

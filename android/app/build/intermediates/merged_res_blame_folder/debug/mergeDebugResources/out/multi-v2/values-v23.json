@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.nattygsmith.refrain.app-mergeDebugResources-64:/values-v23/values-v23.xml",
+            "map": [
+                {
+                    "source": "/Users/nathanielsmith/.gradle/caches/9.0.0/transforms/baaac85cdafc1b396d3f8a57b6ad9291/transformed/work-runtime-2.9.1/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
+                    }
+                },
+                {
+                    "source": "/Users/nathanielsmith/.gradle/caches/9.0.0/transforms/5ac999c4c905c2f492a94ece3be08b90/transformed/jetified-glance-appwidget-1.1.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "184",
+                        "endColumns": "55",
+                        "endOffsets": "235"
+                    }
+                }
+            ]
+        }
+    ]
+}

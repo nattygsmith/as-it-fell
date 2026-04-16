@@ -582,3 +582,59 @@ blockquote {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* ── About page — links / store section ─────────────────── */
+.about-links-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.about-store-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-store-badge-img {
+  height: 40px;
+  display: block;
+}
+
+.about-store-coming {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.55;
+  letter-spacing: 0.02em;
+}
+
+.about-contact {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-size: 0.9rem;
+  color: var(--rf-ink);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.about-contact--small {
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+.about-link {
+  color: var(--rf-accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--rf-accent) 35%, transparent);
+  transition: opacity 0.15s;
+}
+.about-link:hover { opacity: 0.75; }
+
+.about-link--muted {
+  color: var(--rf-ink);
+  border-bottom-color: color-mix(in srgb, var(--rf-ink) 25%, transparent);
+}

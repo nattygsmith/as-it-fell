@@ -9,11 +9,29 @@ struct Theme {
     let ink: Color
     let accent: Color
     let mist: Color
-    init(bg: String, ink: String, accent: String, mist: String) {
+    init(bg: String, ink: String, accent: String, mist: String, sheetBgHex: String? = nil) {
         self.bg = Color(bg)
         self.ink = Color(ink)
         self.accent = Color(accent)
         self.mist = Color(mist)
+        self._sheetBgHex = sheetBgHex
+    }
+
+    private let _sheetBgHex: String?
+
+    /// True for evening and night themes (dark backgrounds).
+    var isDark: Bool {
+        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
+        UIColor(bg).getRed(&r, green: &g, blue: &b, alpha: &a)
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b < 0.22
+    }
+
+    /// Background for the lyrics sheet. Uses an explicit override where mist
+    /// is too close to bg to provide visible separation, mist for other dark
+    /// themes, and bg for light themes.
+    var sheetBg: Color {
+        if let hex = _sheetBgHex { return Color(hex) }
+        return isDark ? mist : bg
     }}
 
 // MARK: - Theme lookup
@@ -39,27 +57,18 @@ extension Theme {
             .winter: Theme(bg: "#dde8f0", ink: "#182230", accent: "#3a6888", mist: "#b0cede"),
         ],
         .evening: [
-            .spring: Theme(bg: "#2a3520", ink: "#e8f0d8", accent: "#90c060", mist: "#405030"),
-            .summer: Theme(bg: "#302818", ink: "#f8e8c0", accent: "#e0a040", mist: "#504028"),
+            .spring: Theme(bg: "#2a3520", ink: "#e8f0d8", accent: "#90c060", mist: "#405030", sheetBgHex: "#505a44"),
+            .summer: Theme(bg: "#302818", ink: "#f8e8c0", accent: "#e0a040", mist: "#504028", sheetBgHex: "#584e39"),
             .autumn: Theme(bg: "#2e2010", ink: "#f0d8b0", accent: "#d56d25", mist: "#503020"),
             .winter: Theme(bg: "#181e28", ink: "#c8d8e8", accent: "#6090b8", mist: "#283040"),
         ],
         .night: [
-            .spring: Theme(bg: "#121c10", ink: "#d0e8c0", accent: "#70a850", mist: "#1e2e18"),
-            .summer: Theme(bg: "#181408", ink: "#f0e0a0", accent: "#c89030", mist: "#282010"),
-            .autumn: Theme(bg: "#140e08", ink: "#e8c890", accent: "#b76727", mist: "#221408"),
-            .winter: Theme(bg: "#080c14", ink: "#b0c8e0", accent: "#4d7dad", mist: "#101828"),
+            .spring: Theme(bg: "#121c10", ink: "#d0e8c0", accent: "#70a850", mist: "#1e2e18", sheetBgHex: "#384433"),
+            .summer: Theme(bg: "#181408", ink: "#f0e0a0", accent: "#c89030", mist: "#282010", sheetBgHex: "#433c26"),
+            .autumn: Theme(bg: "#140e08", ink: "#e8c890", accent: "#b76727", mist: "#221408", sheetBgHex: "#3e3323"),
+            .winter: Theme(bg: "#080c14", ink: "#b0c8e0", accent: "#4d7dad", mist: "#101828", sheetBgHex: "#29313c"),
         ],
     ]
-
-    /// True for evening and night themes, which have dark backgrounds.
-    /// Used to apply .preferredColorScheme(.dark) to system controls.
-    var isDark: Bool {
-        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        UIColor(bg).getRed(&r, green: &g, blue: &b, alpha: &a)
-        let luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b
-        return luminance < 0.15
-    }
 }
 
 // MARK: - Hex colour initialiser

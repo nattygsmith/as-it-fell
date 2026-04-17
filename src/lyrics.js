@@ -779,7 +779,8 @@ export const LYRICS = {
     childNumber: "Child 305",
     version: "Version A (Traditional Scottish)",
     stanzas: [
-      "There was a troop of merry gentlemen\nWere riding tween twa knowes;\nThey swore they smelled a bonny lass,\nAs they came by the broom of Cowdenknows.\nIt's up then spake the foremost man,\nSaid, I see her standing there;\nA bonny lass in a green mantle,\nCombing down her yellow hair,\nEarly on a May morning.",
+      "There was a troop of merry gentlemen\nWere riding tween twa knowes;\nThey swore they smelled a bonny lass,\nAs they came by the broom of Cowdenknows.",
+      "It's up then spake the foremost man,\nSaid, I see her standing there;\nA bonny lass in a green mantle,\nCombing down her yellow hair,\nEarly on a May morning.",
       "'O maid, O maid, come tell to me\nWhat land you belong unto?'\n'I'm a poor maid in good green wood,\nAnd herding of the ewes, sir.'",
       "The knight's descended from his horse\nAnd tied it to a tree;\nHe's ta'en the maiden by the hand\nAnd sat down on the lea.",
       "'Now will you go with me,' he said,\n'This merry month of May?\nI'll wed you and I'll bed you,\nAnd your fortune shall be gay.'",

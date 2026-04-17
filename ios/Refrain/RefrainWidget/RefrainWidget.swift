@@ -90,8 +90,7 @@ struct RefrainWidgetView: View {
     private var edgePadding: CGFloat {
         switch family {
         case .systemExtraLarge: return 40
-        case .systemLarge:      return 24
-        default:                return 16
+        default:                return 4
         }
     }
 

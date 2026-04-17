@@ -15,6 +15,7 @@ struct LyricsView: View {
     let entry: LyricsEntry
     let stanzaIndex: Int?
     let theme: Theme
+    var scrollDelay: Double = 0.35
 
     private var isPad: Bool { UIDevice.current.userInterfaceIdiom == .pad }
 
@@ -58,7 +59,7 @@ struct LyricsView: View {
                                 .foregroundStyle(
                                     index == stanzaIndex
                                         ? theme.ink
-                                        : theme.ink.opacity(0.75)
+                                        : theme.ink.opacity(theme.isDark ? 0.85 : 0.75)
                                 )
                                 .multilineTextAlignment(.center)
                                 .lineSpacing(5)
@@ -82,12 +83,11 @@ struct LyricsView: View {
                 }
             }
             .onAppear {
-                scrollTo(index: stanzaIndex, proxy: proxy, delay: 0.35)
+                scrollTo(index: stanzaIndex, proxy: proxy, delay: scrollDelay)
             }
-            .onChange(of: stanzaIndex) { _, newIndex in
+            .onChange(of: stanzaIndex) { newIndex in
                 scrollTo(index: newIndex, proxy: proxy, delay: 0.1)
             }
-            .textSelection(.enabled)
         }
     }
 
@@ -97,7 +97,7 @@ struct LyricsView: View {
         guard let index else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             withAnimation {
-                proxy.scrollTo(index, anchor: .center)
+                proxy.scrollTo(index, anchor: UnitPoint(x: 0.5, y: 0.7))
             }
         }
     }

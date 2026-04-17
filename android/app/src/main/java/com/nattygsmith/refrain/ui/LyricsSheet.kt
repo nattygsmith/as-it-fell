@@ -166,7 +166,7 @@ private fun StanzaItem(
             fontFamily = ImFellEnglish,
             fontSize   = 16.sp,
             lineHeight = 26.sp,
-            color      = if (isHighlighted) theme.ink else theme.ink.copy(alpha = 0.7f),
+            color      = if (isHighlighted) theme.ink else theme.ink.copy(alpha = if (theme.isDark) 0.85f else 0.7f),
             textAlign  = TextAlign.Center,
             modifier   = Modifier.fillMaxWidth(),
         )

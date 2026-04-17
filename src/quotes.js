@@ -586,7 +586,7 @@ export const QUOTES = [
   {
     text: "O waly, waly up the bank!\nAnd waly, waly down the brae!\nAnd waly, waly by yon burn-side,\nWhere me and my love were wont to gae!",
     source: "Jamie Douglas (Child 204)",
-    time: ["morning", "afternoon"],
+    time: ["morning"],
     season: [],
     lyricsKey: "child204",
     stanzaIndex: 0,
@@ -807,7 +807,7 @@ export const QUOTES = [
     time: ["morning"],
     season: ["spring"],
     lyricsKey: "child305",
-    stanzaIndex: 0,
+    stanzaIndex: 1,
     // notes: "Stanza 2. No modernisation needed."
   },
   // --- Willie o Couglas Dale (Child 101) ---
@@ -1741,13 +1741,13 @@ export const QUOTES = [
     // notes: "Stanza 2. Sung by Henry Burstow, Horsham, Sussex, 1893."
   },
   {
-    text: "She sat and sung of her sweet William,\nAs she milked her spotted cow;\nAnd he would sigh for his Rosetta\nAll the day while at the plough;\nAnd as evening did approach,\nRosetta tript along with joy,\nWith voice so shrill, to meet young Will,\nWho was her father's gay ploughboy.",
+    text: "And as evening did approach,\nRosetta tript along with joy,\nWith voice so shrill, to meet young Will,\nWho was her father's gay ploughboy.",
     source: "Rosetta and Her Gay Ploughboy (Broadwood, English Traditional Songs and Carols)",
     time: ["evening"],
     season: [],
     lyricsKey: "broadwoodRosetta",
     stanzaIndex: 2,
-    // notes: "Stanza 3. Sung by Henry Burstow, Horsham, Sussex, 1893."
+    // notes: "Stanza 3, last four lines. Sung by Henry Burstow, Horsham, Sussex, 1893."
   },
   // --- Georgie (Broadwood, English Traditional Songs and Carols) ---
   {

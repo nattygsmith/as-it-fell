@@ -312,7 +312,7 @@ struct ContentView: View {
            let entry = DataStore.shared.lyrics(for: key) {
 
             ZStack(alignment: .topTrailing) {
-                theme.isDark ? theme.mist : theme.bg
+                theme.sheetBg
 
                 LyricsView(entry: entry, stanzaIndex: stanzaIndex, theme: theme)
                     .padding(.top, 24)
@@ -364,7 +364,7 @@ struct ContentView: View {
             LyricsView(entry: entry, stanzaIndex: stanzaIndex, theme: theme)
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
-                .presentationBackground(theme.isDark ? theme.mist : theme.bg)
+                .presentationBackground(theme.sheetBg)
                 .presentationCornerRadius(20)
         }
     }
@@ -405,11 +405,16 @@ struct ContentView: View {
     }
 
     /// Handles deep links from widget taps — navigates to the quote only.
+    /// pendingQuoteID is held for 0.6s total so that repeated didBecomeActive
+    /// notifications (a known iOS quirk during widget-to-app transitions) are
+    /// all suppressed by the guard in handleAppActive.
     private func handleWidgetDeepLink() {
         guard let id = pendingQuoteID else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             clock.navigate(to: id)
-            pendingQuoteID = nil
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                pendingQuoteID = nil
+            }
         }
     }
 
@@ -423,6 +428,8 @@ struct ContentView: View {
     }
 
     /// Refreshes the clock on app foreground, unless a widget deep link is pending.
+    /// The guard on pendingQuoteID is the primary protection; didBecomeActive can
+    /// fire multiple times during a widget-to-app transition.
     private func handleAppActive() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             guard pendingQuoteID == nil else { return }
@@ -462,8 +469,18 @@ private struct BottomOverlay: View {
 
     private let dismissThreshold: CGFloat = 120
 
-    @State private var isExpanded = false
+    @State private var isExpanded: Bool
     @GestureState private var dragOffset: CGFloat = 0
+
+    init(entry: LyricsEntry, stanzaIndex: Int?, theme: Theme, onDismiss: @escaping () -> Void) {
+        self.entry = entry
+        self.stanzaIndex = stanzaIndex
+        self.theme = theme
+        self.onDismiss = onDismiss
+        // Open at full height when navigating to a specific stanza so the
+        // scroll lands correctly. Opens at half height when browsing freely.
+        _isExpanded = State(initialValue: stanzaIndex != nil)
+    }
 
     var body: some View {
         GeometryReader { geo in
@@ -521,9 +538,10 @@ private struct BottomOverlay: View {
                     )
 
                 LyricsView(entry: entry, stanzaIndex: stanzaIndex, theme: theme)
+                    .contentMargins(.bottom, 100, for: .scrollContent)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .background(theme.isDark ? theme.mist : theme.bg)
+            .background(theme.sheetBg)
             .clipShape(UnevenRoundedRectangle(
                 topLeadingRadius: 20, bottomLeadingRadius: 0,
                 bottomTrailingRadius: 0, topTrailingRadius: 20,

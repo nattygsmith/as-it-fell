@@ -15,17 +15,18 @@ data class RefrainTheme(
     val ink: Color,
     val accent: Color,
     val mist: Color,
+    private val sheetBgOverride: Color? = null,
 ) {
-    /** True for evening and night themes. Used to determine sheet background. */
+    /** True for evening and night themes (dark backgrounds). */
     val isDark: Boolean get() {
-        val r = bg.red
-        val g = bg.green
-        val b = bg.blue
-        val luminance = 0.2126f * r + 0.7152f * g + 0.0722f * b
+        val luminance = 0.2126f * bg.red + 0.7152f * bg.green + 0.0722f * bg.blue
         return luminance < 0.15f
     }
 
-    val sheetBg: Color get() = if (isDark) mist else bg
+    /** Background for the lyrics sheet. Uses an explicit override where mist
+     *  is too close to bg to provide visible separation, mist for other dark
+     *  themes, and bg for light themes. */
+    val sheetBg: Color get() = sheetBgOverride ?: if (isDark) mist else bg
 }
 
 // ── Hex helper ────────────────────────────────────────────────────────────────
@@ -52,16 +53,16 @@ private val themes: Map<TimeOfDay, Map<Season, RefrainTheme>> = mapOf(
         Season.WINTER to RefrainTheme(hex("#dde8f0"), hex("#182230"), hex("#3a6888"), hex("#b0cede")),
     ),
     TimeOfDay.EVENING to mapOf(
-        Season.SPRING to RefrainTheme(hex("#2a3520"), hex("#e8f0d8"), hex("#90c060"), hex("#405030")),
-        Season.SUMMER to RefrainTheme(hex("#302818"), hex("#f8e8c0"), hex("#e0a040"), hex("#504028")),
+        Season.SPRING to RefrainTheme(hex("#2a3520"), hex("#e8f0d8"), hex("#90c060"), hex("#405030"), sheetBgOverride = hex("#505a44")),
+        Season.SUMMER to RefrainTheme(hex("#302818"), hex("#f8e8c0"), hex("#e0a040"), hex("#504028"), sheetBgOverride = hex("#584e39")),
         Season.AUTUMN to RefrainTheme(hex("#2e2010"), hex("#f0d8b0"), hex("#d56d25"), hex("#503020")),
         Season.WINTER to RefrainTheme(hex("#181e28"), hex("#c8d8e8"), hex("#6090b8"), hex("#283040")),
     ),
     TimeOfDay.NIGHT to mapOf(
-        Season.SPRING to RefrainTheme(hex("#121c10"), hex("#d0e8c0"), hex("#70a850"), hex("#1e2e18")),
-        Season.SUMMER to RefrainTheme(hex("#181408"), hex("#f0e0a0"), hex("#c89030"), hex("#282010")),
-        Season.AUTUMN to RefrainTheme(hex("#140e08"), hex("#e8c890"), hex("#b76727"), hex("#221408")),
-        Season.WINTER to RefrainTheme(hex("#080c14"), hex("#b0c8e0"), hex("#4d7dad"), hex("#101828")),
+        Season.SPRING to RefrainTheme(hex("#121c10"), hex("#d0e8c0"), hex("#70a850"), hex("#1e2e18"), sheetBgOverride = hex("#384433")),
+        Season.SUMMER to RefrainTheme(hex("#181408"), hex("#f0e0a0"), hex("#c89030"), hex("#282010"), sheetBgOverride = hex("#433c26")),
+        Season.AUTUMN to RefrainTheme(hex("#140e08"), hex("#e8c890"), hex("#b76727"), hex("#221408"), sheetBgOverride = hex("#3e3323")),
+        Season.WINTER to RefrainTheme(hex("#080c14"), hex("#b0c8e0"), hex("#4d7dad"), hex("#101828"), sheetBgOverride = hex("#29313c")),
     ),
 )
 
